@@ -1,0 +1,43 @@
+import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getMessages } from 'next-intl/server'
+import { ThemeProvider } from 'next-themes'
+import '../globals.css'
+
+export const metadata: Metadata = {
+  title: 'FitFlow - Gym Management Software',
+  description: 'Powerful software to manage members, payments, and operations for your fitness center',
+}
+
+type Props = {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages()
+
+  // Determine text direction based on locale
+  const direction = locale === 'ar' ? 'rtl' : 'ltr'
+
+  return (
+    <html lang={locale} dir={direction} suppressHydrationWarning>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  )
+}
