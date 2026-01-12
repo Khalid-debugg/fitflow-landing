@@ -20,6 +20,15 @@ model User {
   name         String?
   passwordHash String   @db.Text
 
+  // Email verification
+  emailVerified           DateTime? // null = not verified
+  verificationToken       String?   @db.VarChar(255)
+  verificationTokenExpiry DateTime?
+
+  // Password reset
+  resetToken       String?   @db.VarChar(255)
+  resetTokenExpiry DateTime?
+
   // Localization preferences
   language          String  @default("en") @db.VarChar(5) // en, ar, es, pt, fr, de
   preferredCurrency String  @default("USD") @db.VarChar(3)
@@ -57,6 +66,8 @@ model User {
   @@index([licenseKey])
   @@index([subscriptionStatus])
   @@index([createdAt])
+  @@index([verificationToken])
+  @@index([resetToken])
 }
 
 // ============================================
