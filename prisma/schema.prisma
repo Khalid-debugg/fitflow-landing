@@ -6,9 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
-  url          = env("DATABASE_URL")
-  relationMode = "prisma"
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 // ============================================
@@ -105,7 +105,7 @@ model Download {
 model CurrencyRate {
   id          String   @id @default(cuid())
   currency    String   @unique @db.VarChar(3) // "EGP", "SAR", etc.
-  rateToUSD   Float    @db.Double // 1 USD = X currency
+  rateToUSD   Float    @db.DoublePrecision // 1 USD = X currency
   lastUpdated DateTime @default(now())
 
   @@index([currency])
