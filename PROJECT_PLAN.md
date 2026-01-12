@@ -5,24 +5,26 @@
 **Project:** FitFlow Landing Page & SaaS Platform
 **Purpose:** Marketing website + user management for FitFlow gym management desktop app
 **Start Date:** January 2026
-**Status:** Phase 1-4 Complete ✅
+**Status:** Phase 1-6 Complete ✅ | Database Setup Complete
 
 ---
 
 ## 🎉 Current Progress
 
-**Milestone Reached:** Foundation Complete!
+**Milestone Reached:** Database Setup Complete!
 
-**✅ Completed (4/22 phases):**
+**✅ Completed (6/22 phases):**
 - Phase 1: Project Setup & Foundation
 - Phase 2: i18n Configuration (6 languages)
 - Phase 3: Translation Files (English, Arabic, Spanish, Portuguese, French, German)
 - Phase 4: Tailwind CSS + RTL + Dark Mode
+- Phase 5: Database Schema with Prisma
+- Phase 6: Supabase Connection & Migrations
 
 **🎯 Next Up:**
-- Phase 5: Database Schema with Prisma
+- Phase 7: Authentication System (NextAuth.js v5)
 
-**📊 Completion:** 18% (4 of 22 phases)
+**📊 Completion:** 27% (6 of 22 phases)
 
 ---
 
@@ -81,7 +83,7 @@ Languages from launch:
 ### Backend & Services
 | Service | Purpose | Free Tier | Paid Tier |
 |---------|---------|-----------|-----------|
-| **PlanetScale** | MySQL database | 5GB, 1B rows/month | $29/month |
+| **Supabase** | PostgreSQL database | 500MB, Unlimited API requests | $25/month Pro |
 | **NextAuth.js v5** | Authentication | Free (self-hosted) | - |
 | **Prisma ORM** | Database queries | Free | - |
 | **LemonSqueezy** | Payments | ~5% per transaction | Same |
@@ -339,17 +341,18 @@ fitflow-landing/
 - [x] Add RTL direction support for Arabic
 - [x] Create CSS variables for theming
 
-### ⏳ Phase 5: Database Schema with Prisma
-- [ ] Create complete Prisma schema (User, Device, Currency, etc.)
-- [ ] Setup database relationships
-- [ ] Create indexes for performance
-- [ ] Add validation and constraints
+### ✅ Phase 5: Database Schema with Prisma (COMPLETED)
+- [x] Create complete Prisma schema (User, Device, Currency, etc.)
+- [x] Setup database relationships
+- [x] Create indexes for performance
+- [x] Add validation and constraints
 
-### ⏳ Phase 6: PlanetScale Connection & Migrations
-- [ ] Setup PlanetScale account
-- [ ] Configure DATABASE_URL in .env
-- [ ] Run initial migration (npx prisma db push)
-- [ ] Seed initial data if needed
+### ✅ Phase 6: Supabase Connection & Migrations (COMPLETED)
+- [x] Setup Supabase account and create database
+- [x] Configure DATABASE_URL and DIRECT_URL in .env (PostgreSQL connection strings)
+- [x] Install ts-node for seed script execution
+- [x] Run initial migration (npx prisma migrate dev)
+- [x] Seed database with 16 initial currency rates
 
 ### ⏳ Phase 7: Authentication System (NextAuth.js v5)
 - [ ] Configure NextAuth with credentials provider
@@ -514,7 +517,7 @@ fitflow-landing/
 
 ### Free Tier (0-100 users)
 - Vercel: $0
-- PlanetScale: $0
+- Supabase: $0 (500MB database, unlimited API requests)
 - Resend: $0 (3K emails/month)
 - ipapi.co: $0 (1K requests/day)
 - exchangerate-api: $0
@@ -523,15 +526,15 @@ fitflow-landing/
 
 ### Small Scale (100-500 users)
 - Vercel: $0-20/month
-- PlanetScale: $0-29/month (may need paid tier)
+- Supabase: $0 (still within free tier limits)
 - Resend: $0-10/month
-- **Total:** ~$30-60/month + transaction fees
+- **Total:** ~$0-30/month + transaction fees
 
 ### Medium Scale (500-2000 users)
 - Vercel: $20/month (Pro plan)
-- PlanetScale: $29/month
+- Supabase: $25/month (Pro plan for more storage/bandwidth)
 - Resend: $20/month
-- **Total:** ~$70/month + transaction fees
+- **Total:** ~$65/month + transaction fees
 
 ---
 
@@ -618,8 +621,8 @@ fitflow-landing/
 ## 📝 Environment Variables Needed
 
 ```env
-# Database
-DATABASE_URL="mysql://user:password@host:port/database"
+# Database (Supabase PostgreSQL)
+DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supabase.co:5432/postgres"
 
 # NextAuth
 NEXTAUTH_SECRET="random-secret-key-here"
@@ -685,7 +688,7 @@ IPAPI_KEY="" # Free tier doesn't need key
 
 ### Prisma
 - [Prisma Docs](https://www.prisma.io/docs)
-- [PlanetScale + Prisma](https://www.prisma.io/docs/guides/database/planetscale)
+- [Supabase + Prisma](https://www.prisma.io/docs/guides/database/supabase)
 
 ### NextAuth
 - [NextAuth v5 Docs](https://authjs.dev/)
@@ -749,6 +752,6 @@ IPAPI_KEY="" # Free tier doesn't need key
 
 ---
 
-**Last Updated:** January 9, 2026
-**Version:** 1.0
-**Status:** Active Development - Phases 1-4 Complete ✅ | Ready for Phase 5 (Database Schema)
+**Last Updated:** January 12, 2026
+**Version:** 1.1
+**Status:** Active Development - Phases 1-6 Complete ✅ | Ready for Phase 7 (Authentication System)
