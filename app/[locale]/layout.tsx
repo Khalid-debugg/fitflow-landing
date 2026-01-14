@@ -2,7 +2,21 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { ThemeProvider } from 'next-themes'
+import { Antonio, Inter } from 'next/font/google'
 import '../globals.css'
+
+const antonio = Antonio({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-antonio',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'FitFlow - Gym Management Software',
@@ -26,7 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
-      <body>
+      <body className={`${inter.variable} ${antonio.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
