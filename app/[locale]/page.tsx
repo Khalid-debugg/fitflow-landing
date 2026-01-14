@@ -1,23 +1,21 @@
-import { useTranslations } from 'next-intl'
+import { Header } from '@/components/landing/Header'
+import { Hero } from '@/components/landing/Hero'
+import { Features } from '@/components/landing/Features'
+import { Pricing } from '@/components/landing/Pricing'
+import { Testimonials } from '@/components/landing/Testimonials'
+import { Footer } from '@/components/landing/Footer'
 
 export default function HomePage() {
-  const t = useTranslations('home')
-
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight">
-          {t('title')}
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          {t('subtitle')}
-        </p>
-        <div className="mt-8">
-          <p className="text-sm text-muted-foreground">
-            🌍 Multilingual support: English, Arabic, Spanish, Portuguese, French, German
-          </p>
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <Features />
+        <Pricing />
+        <Testimonials />
+      </main>
+      <Footer />
     </div>
   )
 }
