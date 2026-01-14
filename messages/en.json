@@ -1,0 +1,198 @@
+{
+  "landing": {
+    "nav": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "testimonials": "Testimonials",
+      "download": "Download",
+      "signIn": "Sign In",
+      "startFreeTrial": "Start Free Trial"
+    },
+    "hero": {
+      "tagline": "Transform Your Business",
+      "description": "With FitFlow, your gym doesn't just grow — it thrives. Our proven management system focuses on member engagement, revenue growth, and operational excellence.",
+      "cta": {
+        "primary": "Start Free Trial",
+        "login": "Sign In",
+        "learnMore": "Explore Features",
+        "watchDemo": "Watch Demo"
+      },
+      "stats": {
+        "projects": "Projects Completed",
+        "gyms": "Active Gyms",
+        "members": "Members",
+        "uptime": "Uptime",
+        "support": "Support"
+      },
+      "features": {
+        "security": "Secure Platform",
+        "securityDesc": "Enterprise-grade security",
+        "performance": "Lightning Fast",
+        "performanceDesc": "Optimized performance",
+        "analytics": "Advanced Analytics",
+        "analyticsDesc": "Real-time insights",
+        "management": "Member Management",
+        "managementDesc": "Complete control",
+        "support": "24/7 Support",
+        "supportDesc": "Always available",
+        "certified": "Industry Certified",
+        "certifiedDesc": "Trusted by experts"
+      },
+      "badge": {
+        "label": "Next Session",
+        "value": "HIIT Training - 6:00 PM"
+      }
+    },
+    "features": {
+      "heading": "Everything You Need to Run Your Gym",
+      "subtitle": "Comprehensive tools designed specifically for fitness centers and gym owners",
+      "items": {
+        "members": {
+          "title": "Member Management",
+          "description": "Track memberships, attendance, and member progress all in one place"
+        },
+        "payments": {
+          "title": "Payment Processing",
+          "description": "Accept payments, manage subscriptions, and generate invoices automatically"
+        },
+        "analytics": {
+          "title": "Analytics & Reports",
+          "description": "Get insights into your business with detailed reports and analytics"
+        },
+        "multilingual": {
+          "title": "Multi-Language Support",
+          "description": "Available in 6 languages: English, Arabic, Spanish, Portuguese, French, and German"
+        },
+        "devices": {
+          "title": "Multi-Device Licensing",
+          "description": "Activate on multiple devices based on your plan. Online validation with offline grace period"
+        },
+        "currency": {
+          "title": "Multi-Currency",
+          "description": "Support for 15+ currencies with automatic exchange rate updates"
+        }
+      }
+    },
+    "pricing": {
+      "heading": "Simple, Transparent Pricing",
+      "subtitle": "Choose the plan that fits your gym. All plans include a 30-day free trial.",
+      "toggle": {
+        "subscription": "Subscription",
+        "perpetual": "Perpetual License"
+      },
+      "period": {
+        "month": "/month",
+        "year": "/year",
+        "oneTime": "one-time"
+      },
+      "plans": {
+        "basic": {
+          "name": "Basic",
+          "description": "Perfect for small gyms and personal trainers",
+          "cta": "Start Free Trial"
+        },
+        "pro": {
+          "name": "Pro",
+          "description": "Most popular for growing fitness centers",
+          "badge": "Popular",
+          "cta": "Start Free Trial"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "description": "For large gyms and multi-location chains",
+          "cta": "Contact Sales"
+        }
+      },
+      "features": {
+        "devices": "Device Activations",
+        "devices_basic": "1 Device",
+        "devices_pro": "3 Devices",
+        "devices_enterprise": "Unlimited",
+        "updates": "Updates",
+        "updates_subscription": "Continuous",
+        "updates_perpetual": "1 Year",
+        "support": "Support",
+        "support_basic": "Email",
+        "support_pro": "Priority Email",
+        "support_enterprise": "Dedicated Manager",
+        "multilocation": "Multi-Location",
+        "branding": "Custom Branding",
+        "api": "API Access"
+      }
+    },
+    "testimonials": {
+      "heading": "Trusted by Gym Owners Worldwide",
+      "subtitle": "See what our customers have to say about FitFlow",
+      "items": {
+        "testimonial1": {
+          "name": "Sarah Johnson",
+          "role": "Owner, FitLife Gym",
+          "content": "FitFlow transformed how we manage our gym. The member tracking and automated billing have saved us hours every week. Highly recommended!"
+        },
+        "testimonial2": {
+          "name": "Michael Rodriguez",
+          "role": "Manager, PowerHouse Fitness",
+          "content": "The multi-language support is a game-changer for our diverse member base. The software is intuitive and the customer support is excellent."
+        },
+        "testimonial3": {
+          "name": "Emma Chen",
+          "role": "Owner, Zenith CrossFit",
+          "content": "Best investment we've made for our business. The analytics help us make data-driven decisions and the perpetual license option was perfect for us."
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Transform your gym management with FitFlow",
+      "sections": {
+        "product": {
+          "title": "Product",
+          "features": "Features",
+          "pricing": "Pricing",
+          "download": "Download",
+          "changelog": "Changelog"
+        },
+        "company": {
+          "title": "Company",
+          "about": "About Us",
+          "blog": "Blog",
+          "careers": "Careers",
+          "contact": "Contact"
+        },
+        "resources": {
+          "title": "Resources",
+          "documentation": "Documentation",
+          "support": "Support",
+          "api": "API Reference",
+          "community": "Community"
+        },
+        "legal": {
+          "title": "Legal",
+          "privacy": "Privacy Policy",
+          "terms": "Terms of Service",
+          "license": "License Agreement",
+          "security": "Security"
+        }
+      },
+      "copyright": "� 2026 FitFlow. All rights reserved."
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Sign In",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up"
+    },
+    "signup": {
+      "title": "Create Account",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "signinLink": "Sign in"
+    }
+  }
+}

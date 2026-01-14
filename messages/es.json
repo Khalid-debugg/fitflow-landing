@@ -1,0 +1,198 @@
+{
+  "landing": {
+    "nav": {
+      "features": "Características",
+      "pricing": "Precios",
+      "testimonials": "Testimonios",
+      "download": "Descargar",
+      "signIn": "Iniciar Sesión",
+      "startFreeTrial": "Iniciar Prueba Gratuita"
+    },
+    "hero": {
+      "tagline": "Transforma Tu Negocio",
+      "description": "Con FitFlow, tu gimnasio no solo crece — prospera. Nuestro sistema de gestión probado se enfoca en el compromiso de los miembros, el crecimiento de ingresos y la excelencia operativa.",
+      "cta": {
+        "primary": "Iniciar Prueba Gratuita",
+        "login": "Iniciar Sesión",
+        "learnMore": "Explorar Funciones",
+        "watchDemo": "Ver Demostración"
+      },
+      "stats": {
+        "projects": "Proyectos Completados",
+        "gyms": "Gimnasios Activos",
+        "members": "Miembros",
+        "uptime": "Tiempo de Actividad",
+        "support": "Soporte"
+      },
+      "features": {
+        "security": "Plataforma Segura",
+        "securityDesc": "Seguridad empresarial",
+        "performance": "Ultra Rápido",
+        "performanceDesc": "Rendimiento optimizado",
+        "analytics": "Análisis Avanzado",
+        "analyticsDesc": "Información en tiempo real",
+        "management": "Gestión de Socios",
+        "managementDesc": "Control completo",
+        "support": "Soporte 24/7",
+        "supportDesc": "Siempre disponible",
+        "certified": "Certificado por la Industria",
+        "certifiedDesc": "Confiado por expertos"
+      },
+      "badge": {
+        "label": "Próxima Sesión",
+        "value": "Entrenamiento HIIT - 6:00 PM"
+      }
+    },
+    "features": {
+      "heading": "Todo lo que Necesitas para Dirigir tu Gimnasio",
+      "subtitle": "Herramientas completas diseñadas específicamente para centros deportivos y propietarios de gimnasios",
+      "items": {
+        "members": {
+          "title": "Gestión de Socios",
+          "description": "Controla membresías, asistencia y progreso de socios en un solo lugar"
+        },
+        "payments": {
+          "title": "Procesamiento de Pagos",
+          "description": "Acepta pagos, gestiona suscripciones y genera facturas automáticamente"
+        },
+        "analytics": {
+          "title": "Análisis e Informes",
+          "description": "Obtén información sobre tu negocio con informes y análisis detallados"
+        },
+        "multilingual": {
+          "title": "Soporte Multiidioma",
+          "description": "Disponible en 6 idiomas: inglés, árabe, español, portugués, francés y alemán"
+        },
+        "devices": {
+          "title": "Licencia Multidispositivo",
+          "description": "Activa en múltiples dispositivos según tu plan. Validación en línea con período de gracia sin conexión"
+        },
+        "currency": {
+          "title": "Multimoneda",
+          "description": "Soporte para más de 15 monedas con actualizaciones automáticas de tipo de cambio"
+        }
+      }
+    },
+    "pricing": {
+      "heading": "Precios Simples y Transparentes",
+      "subtitle": "Elige el plan que se ajuste a tu gimnasio. Todos los planes incluyen una prueba gratuita de 30 días.",
+      "toggle": {
+        "subscription": "Suscripción",
+        "perpetual": "Licencia Perpetua"
+      },
+      "period": {
+        "month": "/mes",
+        "year": "/año",
+        "oneTime": "pago único"
+      },
+      "plans": {
+        "basic": {
+          "name": "Básico",
+          "description": "Perfecto para gimnasios pequeños y entrenadores personales",
+          "cta": "Iniciar Prueba Gratuita"
+        },
+        "pro": {
+          "name": "Pro",
+          "description": "Más popular para centros deportivos en crecimiento",
+          "badge": "Popular",
+          "cta": "Iniciar Prueba Gratuita"
+        },
+        "enterprise": {
+          "name": "Enterprise",
+          "description": "Para gimnasios grandes y cadenas multisede",
+          "cta": "Contactar Ventas"
+        }
+      },
+      "features": {
+        "devices": "Activaciones de Dispositivo",
+        "devices_basic": "1 Dispositivo",
+        "devices_pro": "3 Dispositivos",
+        "devices_enterprise": "Ilimitado",
+        "updates": "Actualizaciones",
+        "updates_subscription": "Continuas",
+        "updates_perpetual": "1 Año",
+        "support": "Soporte",
+        "support_basic": "Email",
+        "support_pro": "Email Prioritario",
+        "support_enterprise": "Gestor Dedicado",
+        "multilocation": "Multisede",
+        "branding": "Marca Personalizada",
+        "api": "Acceso API"
+      }
+    },
+    "testimonials": {
+      "heading": "Confiado por Propietarios de Gimnasios en Todo el Mundo",
+      "subtitle": "Descubre qué dicen nuestros clientes sobre FitFlow",
+      "items": {
+        "testimonial1": {
+          "name": "Sarah Johnson",
+          "role": "Propietaria, FitLife Gym",
+          "content": "FitFlow transformó la forma en que gestionamos nuestro gimnasio. El seguimiento de socios y la facturación automatizada nos han ahorrado horas cada semana. ¡Muy recomendable!"
+        },
+        "testimonial2": {
+          "name": "Michael Rodríguez",
+          "role": "Gerente, PowerHouse Fitness",
+          "content": "El soporte multiidioma es un cambio radical para nuestra base de socios diversa. El software es intuitivo y el servicio al cliente es excelente."
+        },
+        "testimonial3": {
+          "name": "Emma Chen",
+          "role": "Propietaria, Zenith CrossFit",
+          "content": "La mejor inversión que hemos hecho para nuestro negocio. Los análisis nos ayudan a tomar decisiones basadas en datos y la opción de licencia perpetua fue perfecta para nosotros."
+        }
+      }
+    },
+    "footer": {
+      "tagline": "Transforma la gestión de tu gimnasio con FitFlow",
+      "sections": {
+        "product": {
+          "title": "Producto",
+          "features": "Características",
+          "pricing": "Precios",
+          "download": "Descargar",
+          "changelog": "Registro de Cambios"
+        },
+        "company": {
+          "title": "Empresa",
+          "about": "Sobre Nosotros",
+          "blog": "Blog",
+          "careers": "Carreras",
+          "contact": "Contacto"
+        },
+        "resources": {
+          "title": "Recursos",
+          "documentation": "Documentación",
+          "support": "Soporte",
+          "api": "Referencia API",
+          "community": "Comunidad"
+        },
+        "legal": {
+          "title": "Legal",
+          "privacy": "Política de Privacidad",
+          "terms": "Términos de Servicio",
+          "license": "Acuerdo de Licencia",
+          "security": "Seguridad"
+        }
+      },
+      "copyright": "© 2026 FitFlow. Todos los derechos reservados."
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Iniciar Sesión",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "submit": "Iniciar Sesión",
+      "noAccount": "¿No tienes una cuenta?",
+      "signupLink": "Registrarse"
+    },
+    "signup": {
+      "title": "Crear Cuenta",
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "password": "Contraseña",
+      "submit": "Crear Cuenta",
+      "hasAccount": "¿Ya tienes una cuenta?",
+      "signinLink": "Iniciar sesión"
+    }
+  }
+}
