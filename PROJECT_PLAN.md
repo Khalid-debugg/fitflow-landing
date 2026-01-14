@@ -377,27 +377,27 @@ fitflow-landing/
 - [x] Documentation (lib/currency/README.md)
 
 ### ⏳ Phase 9: Language & Currency Selector Components
-- [ ] Language selector dropdown
-- [ ] Currency selector dropdown
-- [ ] Cookie-based preference storage
-- [ ] Auto-detection on first visit
-- [ ] Smooth page reloads on change
+- [x] Language selector dropdown
+- [x] Currency selector dropdown
+- [x] Cookie-based preference storage
+- [x] Auto-detection on first visit
+- [x] Smooth page reloads on change
 
 ### ⏳ Phase 10: Landing Page UI with Tiered Pricing
-- [ ] Hero section with CTA
-- [ ] Features section
-- [ ] Pricing section (3 plans)
-- [ ] Testimonials section
-- [ ] Footer
-- [ ] Responsive design
-- [ ] Dark mode support
+- [x] Hero section with CTA
+- [x] Features section
+- [x] Pricing section (3 plans)
+- [x] Testimonials section
+- [x] Footer
+- [x] Responsive design
+- [x] Dark mode support
 
 ### ⏳ Phase 11: Dynamic Pricing Display (Multi-Currency)
-- [ ] Client-side price fetching
-- [ ] Loading states for price conversion
-- [ ] Display original USD price
-- [ ] Show converted local price
-- [ ] Handle loading/error states
+- [x] Client-side price fetching
+- [x] Loading states for price conversion
+- [x] Display original USD price
+- [x] Show converted local price
+- [x] Handle loading/error states
 
 ### ⏳ Phase 12: License Key System
 - [ ] Generate unique license keys (crypto-based)
