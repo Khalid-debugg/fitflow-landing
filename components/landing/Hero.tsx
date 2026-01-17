@@ -20,7 +20,7 @@ export function Hero() {
 
       <div className="container relative z-10 px-4 py-8 mx-auto">
         {/* FitFlow Title at Top Center */}
-        <div className="flex justify-center mb-16">
+        <div className="flex justify-center mb-16" dir='ltr'>
           <h2 className="font-display font-black text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tight relative group cursor-default">
             <span className="relative inline-block bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_hsl(var(--primary)/0.5)] animate-pulse-subtle">
               Fit
