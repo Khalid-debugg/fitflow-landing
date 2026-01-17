@@ -6,7 +6,10 @@
       "testimonials": "Témoignages",
       "download": "Télécharger",
       "signIn": "Se Connecter",
-      "startFreeTrial": "Démarrer l'Essai Gratuit"
+      "startFreeTrial": "Démarrer l'Essai Gratuit",
+      "myAccount": "Mon Compte",
+      "dashboard": "Tableau de Bord",
+      "logout": "Se Déconnecter"
     },
     "hero": {
       "tagline": "Transformez Votre Entreprise",
@@ -178,21 +181,191 @@
   },
   "auth": {
     "signin": {
-      "title": "Se Connecter",
-      "email": "Email",
-      "password": "Mot de Passe",
+      "title": "Bon Retour",
+      "subtitle": "Connectez-vous à votre compte FitFlow",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "password": "Mot de passe",
+      "passwordPlaceholder": "Entrez votre mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
       "submit": "Se Connecter",
+      "submitting": "Connexion...",
       "noAccount": "Vous n'avez pas de compte ?",
-      "signupLink": "S'inscrire"
+      "signupLink": "Commencer l'essai gratuit",
+      "errors": {
+        "emailRequired": "L'e-mail est requis",
+        "emailInvalid": "Veuillez entrer un e-mail valide",
+        "passwordRequired": "Le mot de passe est requis",
+        "invalidCredentials": "E-mail ou mot de passe incorrect",
+        "emailNotVerified": "Veuillez vérifier votre e-mail avant de vous connecter",
+        "serverError": "Quelque chose s'est mal passé. Veuillez réessayer."
+      },
+      "brandMessage": {
+        "title": "Transformez la Gestion de Votre Salle de Sport",
+        "description": "Rejoignez des milliers de propriétaires de salles de sport qui font confiance à FitFlow pour optimiser leurs opérations et développer leur activité.",
+        "features": {
+          "feature1": "Essai gratuit de 30 jours",
+          "feature2": "Aucune carte bancaire requise",
+          "feature3": "Annulez à tout moment"
+        }
+      }
     },
     "signup": {
-      "title": "Créer un Compte",
-      "name": "Nom Complet",
-      "email": "Email",
-      "password": "Mot de Passe",
+      "title": "Commencez Votre Essai Gratuit",
+      "subtitle": "Créez votre compte et obtenez 30 jours gratuits",
+      "name": "Nom complet",
+      "namePlaceholder": "Jean Dupont",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
       "submit": "Créer un Compte",
+      "submitting": "Création du compte...",
       "hasAccount": "Vous avez déjà un compte ?",
-      "signinLink": "Se connecter"
+      "signinLink": "Se connecter",
+      "passwordRequirements": {
+        "title": "Le mot de passe doit contenir :",
+        "minLength": "Au moins 8 caractères",
+        "uppercase": "Une lettre majuscule",
+        "lowercase": "Une lettre minuscule",
+        "number": "Un chiffre"
+      },
+      "success": {
+        "title": "Compte Créé !",
+        "message": "Veuillez vérifier votre e-mail pour vérifier votre compte.",
+        "checkEmail": "Nous avons envoyé un lien de vérification à {email}"
+      },
+      "errors": {
+        "nameRequired": "Le nom est requis",
+        "emailRequired": "L'e-mail est requis",
+        "emailInvalid": "Veuillez entrer un e-mail valide",
+        "emailExists": "Un compte avec cet e-mail existe déjà",
+        "passwordRequired": "Le mot de passe est requis",
+        "passwordWeak": "Le mot de passe ne respecte pas les exigences",
+        "confirmRequired": "Veuillez confirmer votre mot de passe",
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "serverError": "Quelque chose s'est mal passé. Veuillez réessayer."
+      },
+      "brandMessage": {
+        "title": "Tout ce dont Vous Avez Besoin pour Réussir",
+        "description": "Logiciel puissant de gestion de salles de sport conçu pour les entreprises de fitness modernes.",
+        "features": {
+          "feature1": "Gestion complète des membres",
+          "feature2": "Facturation et paiements automatiques",
+          "feature3": "Analyses en temps réel",
+          "feature4": "Support multilingue"
+        }
+      }
+    },
+    "forgotPassword": {
+      "title": "Réinitialiser Votre Mot de Passe",
+      "subtitle": "Entrez votre e-mail et nous vous enverrons un lien de réinitialisation",
+      "email": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.com",
+      "submit": "Envoyer le Lien",
+      "submitting": "Envoi...",
+      "backToSignin": "Retour à la connexion",
+      "success": {
+        "title": "Vérifiez Votre E-mail",
+        "message": "Si un compte existe avec {email}, vous recevrez bientôt un lien de réinitialisation.",
+        "note": "Le lien expirera dans 1 heure."
+      },
+      "errors": {
+        "emailRequired": "L'e-mail est requis",
+        "emailInvalid": "Veuillez entrer un e-mail valide",
+        "serverError": "Quelque chose s'est mal passé. Veuillez réessayer."
+      }
+    },
+    "resetPassword": {
+      "title": "Créer un Nouveau Mot de Passe",
+      "subtitle": "Entrez votre nouveau mot de passe ci-dessous",
+      "password": "Nouveau mot de passe",
+      "passwordPlaceholder": "Créez un mot de passe fort",
+      "confirmPassword": "Confirmer le mot de passe",
+      "confirmPasswordPlaceholder": "Ressaisissez votre mot de passe",
+      "submit": "Réinitialiser le Mot de Passe",
+      "submitting": "Réinitialisation...",
+      "success": {
+        "title": "Mot de Passe Réinitialisé",
+        "message": "Votre mot de passe a été mis à jour.",
+        "signIn": "Connectez-vous avec votre nouveau mot de passe"
+      },
+      "errors": {
+        "passwordRequired": "Le mot de passe est requis",
+        "passwordWeak": "Le mot de passe ne respecte pas les exigences",
+        "confirmRequired": "Veuillez confirmer votre mot de passe",
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "tokenInvalid": "Ce lien est invalide ou a expiré",
+        "serverError": "Quelque chose s'est mal passé. Veuillez réessayer."
+      },
+      "passwordRequirements": {
+        "title": "Le mot de passe doit contenir :",
+        "minLength": "Au moins 8 caractères",
+        "uppercase": "Une lettre majuscule",
+        "lowercase": "Une lettre minuscule",
+        "number": "Un chiffre"
+      }
+    },
+    "verifyEmail": {
+      "title": "Vérification de Votre E-mail",
+      "verifying": "Veuillez patienter pendant que nous vérifions votre e-mail...",
+      "success": {
+        "title": "E-mail Vérifié !",
+        "message": "Votre e-mail a été vérifié avec succès.",
+        "welcome": "Bienvenue sur FitFlow ! Votre essai gratuit de 30 jours a commencé.",
+        "signIn": "Connectez-vous pour continuer"
+      },
+      "error": {
+        "title": "Échec de la Vérification",
+        "invalidToken": "Ce lien de vérification est invalide ou a expiré.",
+        "alreadyVerified": "Cet e-mail a déjà été vérifié.",
+        "serverError": "Quelque chose s'est mal passé. Veuillez réessayer.",
+        "requestNew": "Demander un nouvel e-mail de vérification"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "welcome": "Bienvenue, {name}!",
+    "description": "Gérez votre licence FitFlow et surveillez vos appareils actifs",
+    "error": "Erreur",
+    "errorMessage": "Impossible de charger les informations de votre compte. Veuillez réessayer plus tard.",
+    "license": {
+      "title": "Votre Clé de Licence",
+      "description": "Utilisez cette clé pour activer FitFlow sur vos appareils"
+    },
+    "trial": {
+      "title": "Essai Gratuit Actif",
+      "daysRemaining": "{days, plural, =0 {L'essai expire aujourd'hui} =1 {1 jour restant} other {# jours restants}}",
+      "upgradeButton": "Mettre à Niveau Maintenant"
+    },
+    "status": {
+      "label": "Statut"
+    },
+    "plan": {
+      "label": "Plan",
+      "trial": "Essai"
+    },
+    "devices": {
+      "label": "Appareils"
+    },
+    "activatedDevices": {
+      "title": "Appareils Activés",
+      "count": "{current} sur {limit} appareils activés",
+      "noDevices": "Aucun appareil activé pour le moment",
+      "getStarted": "Téléchargez et installez FitFlow pour commencer",
+      "deviceFallback": "Appareil {platform}",
+      "trialActive": "Essai : {days}j restants",
+      "trialExpired": "Essai Expiré",
+      "activatedLabel": "Activé",
+      "trialEndsLabel": "L'essai se termine"
+    },
+    "download": {
+      "title": "Télécharger FitFlow",
+      "description": "Installez FitFlow sur votre ordinateur pour commencer. Utilisez votre clé de licence pour l'activer.",
+      "windows": "Télécharger pour Windows",
+      "mac": "Télécharger pour Mac",
+      "linux": "Télécharger pour Linux"
     }
   }
 }

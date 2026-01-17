@@ -6,7 +6,10 @@
       "testimonials": "Referenzen",
       "download": "Download",
       "signIn": "Anmelden",
-      "startFreeTrial": "Kostenlose Testversion Starten"
+      "startFreeTrial": "Kostenlose Testversion Starten",
+      "myAccount": "Mein Konto",
+      "dashboard": "Dashboard",
+      "logout": "Abmelden"
     },
     "hero": {
       "tagline": "Transformieren Sie Ihr Geschäft",
@@ -178,21 +181,191 @@
   },
   "auth": {
     "signin": {
-      "title": "Anmelden",
-      "email": "E-Mail",
+      "title": "Willkommen Zurück",
+      "subtitle": "Melden Sie sich bei Ihrem FitFlow-Konto an",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "sie@beispiel.com",
       "password": "Passwort",
+      "passwordPlaceholder": "Geben Sie Ihr Passwort ein",
+      "forgotPassword": "Passwort vergessen?",
       "submit": "Anmelden",
+      "submitting": "Wird angemeldet...",
       "noAccount": "Noch kein Konto?",
-      "signupLink": "Registrieren"
+      "signupLink": "Kostenlose Testversion starten",
+      "errors": {
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+        "passwordRequired": "Passwort ist erforderlich",
+        "invalidCredentials": "Ungültige E-Mail oder Passwort",
+        "emailNotVerified": "Bitte verifizieren Sie Ihre E-Mail, bevor Sie sich anmelden",
+        "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+      },
+      "brandMessage": {
+        "title": "Transformieren Sie Ihre Fitness-Studio-Verwaltung",
+        "description": "Schließen Sie sich Tausenden von Fitness-Studio-Besitzern an, die FitFlow vertrauen, um Abläufe zu optimieren und ihr Geschäft auszubauen.",
+        "features": {
+          "feature1": "30 Tage kostenlose Testversion",
+          "feature2": "Keine Kreditkarte erforderlich",
+          "feature3": "Jederzeit kündbar"
+        }
+      }
     },
     "signup": {
-      "title": "Konto Erstellen",
+      "title": "Starten Sie Ihre Kostenlose Testversion",
+      "subtitle": "Erstellen Sie Ihr Konto und erhalten Sie 30 Tage kostenlos",
       "name": "Vollständiger Name",
-      "email": "E-Mail",
+      "namePlaceholder": "Max Mustermann",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "sie@beispiel.com",
       "password": "Passwort",
+      "confirmPassword": "Passwort bestätigen",
       "submit": "Konto Erstellen",
+      "submitting": "Konto wird erstellt...",
       "hasAccount": "Bereits ein Konto?",
-      "signinLink": "Anmelden"
+      "signinLink": "Anmelden",
+      "passwordRequirements": {
+        "title": "Das Passwort muss enthalten:",
+        "minLength": "Mindestens 8 Zeichen",
+        "uppercase": "Einen Großbuchstaben",
+        "lowercase": "Einen Kleinbuchstaben",
+        "number": "Eine Zahl"
+      },
+      "success": {
+        "title": "Konto Erstellt!",
+        "message": "Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu verifizieren.",
+        "checkEmail": "Wir haben einen Bestätigungslink an {email} gesendet"
+      },
+      "errors": {
+        "nameRequired": "Name ist erforderlich",
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+        "emailExists": "Ein Konto mit dieser E-Mail existiert bereits",
+        "passwordRequired": "Passwort ist erforderlich",
+        "passwordWeak": "Das Passwort erfüllt die Anforderungen nicht",
+        "confirmRequired": "Bitte bestätigen Sie Ihr Passwort",
+        "passwordMismatch": "Passwörter stimmen nicht überein",
+        "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+      },
+      "brandMessage": {
+        "title": "Alles, Was Sie Zum Erfolg Brauchen",
+        "description": "Leistungsstarke Fitness-Studio-Verwaltungssoftware für moderne Fitness-Unternehmen.",
+        "features": {
+          "feature1": "Vollständige Mitgliederverwaltung",
+          "feature2": "Automatische Abrechnung & Zahlungen",
+          "feature3": "Echtzeit-Analysen",
+          "feature4": "Mehrsprachiger Support"
+        }
+      }
+    },
+    "forgotPassword": {
+      "title": "Passwort Zurücksetzen",
+      "subtitle": "Geben Sie Ihre E-Mail ein und wir senden Ihnen einen Rücksetzlink",
+      "email": "E-Mail-Adresse",
+      "emailPlaceholder": "sie@beispiel.com",
+      "submit": "Link Senden",
+      "submitting": "Wird gesendet...",
+      "backToSignin": "Zurück zur Anmeldung",
+      "success": {
+        "title": "Überprüfen Sie Ihre E-Mail",
+        "message": "Wenn ein Konto mit {email} existiert, erhalten Sie in Kürze einen Rücksetzlink.",
+        "note": "Der Link läuft in 1 Stunde ab."
+      },
+      "errors": {
+        "emailRequired": "E-Mail ist erforderlich",
+        "emailInvalid": "Bitte geben Sie eine gültige E-Mail ein",
+        "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+      }
+    },
+    "resetPassword": {
+      "title": "Neues Passwort Erstellen",
+      "subtitle": "Geben Sie unten Ihr neues Passwort ein",
+      "password": "Neues Passwort",
+      "passwordPlaceholder": "Erstellen Sie ein sicheres Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "confirmPasswordPlaceholder": "Geben Sie Ihr Passwort erneut ein",
+      "submit": "Passwort Zurücksetzen",
+      "submitting": "Wird zurückgesetzt...",
+      "success": {
+        "title": "Passwort Erfolgreich Zurückgesetzt",
+        "message": "Ihr Passwort wurde aktualisiert.",
+        "signIn": "Melden Sie sich mit Ihrem neuen Passwort an"
+      },
+      "errors": {
+        "passwordRequired": "Passwort ist erforderlich",
+        "passwordWeak": "Das Passwort erfüllt die Anforderungen nicht",
+        "confirmRequired": "Bitte bestätigen Sie Ihr Passwort",
+        "passwordMismatch": "Passwörter stimmen nicht überein",
+        "tokenInvalid": "Dieser Link ist ungültig oder abgelaufen",
+        "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+      },
+      "passwordRequirements": {
+        "title": "Das Passwort muss enthalten:",
+        "minLength": "Mindestens 8 Zeichen",
+        "uppercase": "Einen Großbuchstaben",
+        "lowercase": "Einen Kleinbuchstaben",
+        "number": "Eine Zahl"
+      }
+    },
+    "verifyEmail": {
+      "title": "E-Mail Wird Verifiziert",
+      "verifying": "Bitte warten Sie, während wir Ihre E-Mail verifizieren...",
+      "success": {
+        "title": "E-Mail Verifiziert!",
+        "message": "Ihre E-Mail wurde erfolgreich verifiziert.",
+        "welcome": "Willkommen bei FitFlow! Ihre 30-tägige kostenlose Testversion hat begonnen.",
+        "signIn": "Melden Sie sich an, um fortzufahren"
+      },
+      "error": {
+        "title": "Verifizierung Fehlgeschlagen",
+        "invalidToken": "Dieser Verifizierungslink ist ungültig oder abgelaufen.",
+        "alreadyVerified": "Diese E-Mail wurde bereits verifiziert.",
+        "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+        "requestNew": "Neue Verifizierungs-E-Mail anfordern"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen zurück, {name}!",
+    "description": "Verwalten Sie Ihre FitFlow-Lizenz und überwachen Sie Ihre aktiven Geräte",
+    "error": "Fehler",
+    "errorMessage": "Ihre Kontoinformationen konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
+    "license": {
+      "title": "Ihr Lizenzschlüssel",
+      "description": "Verwenden Sie diesen Schlüssel, um FitFlow auf Ihren Geräten zu aktivieren"
+    },
+    "trial": {
+      "title": "Kostenlose Testversion Aktiv",
+      "daysRemaining": "{days, plural, =0 {Die Testversion läuft heute ab} =1 {1 Tag verbleibend} other {# Tage verbleibend}}",
+      "upgradeButton": "Jetzt Upgraden"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "plan": {
+      "label": "Plan",
+      "trial": "Testversion"
+    },
+    "devices": {
+      "label": "Geräte"
+    },
+    "activatedDevices": {
+      "title": "Aktivierte Geräte",
+      "count": "{current} von {limit} Geräten aktiviert",
+      "noDevices": "Noch keine Geräte aktiviert",
+      "getStarted": "Laden Sie FitFlow herunter und installieren Sie es, um zu beginnen",
+      "deviceFallback": "{platform} Gerät",
+      "trialActive": "Testversion: {days}T verbleibend",
+      "trialExpired": "Testversion Abgelaufen",
+      "activatedLabel": "Aktiviert",
+      "trialEndsLabel": "Testversion endet"
+    },
+    "download": {
+      "title": "FitFlow Herunterladen",
+      "description": "Installieren Sie FitFlow auf Ihrem Computer, um zu beginnen. Verwenden Sie Ihren Lizenzschlüssel zur Aktivierung.",
+      "windows": "Download für Windows",
+      "mac": "Download für Mac",
+      "linux": "Download für Linux"
     }
   }
 }

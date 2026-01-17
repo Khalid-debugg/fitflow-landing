@@ -6,7 +6,10 @@
       "testimonials": "Testimonials",
       "download": "Download",
       "signIn": "Sign In",
-      "startFreeTrial": "Start Free Trial"
+      "startFreeTrial": "Start Free Trial",
+      "myAccount": "My Account",
+      "dashboard": "Dashboard",
+      "logout": "Logout"
     },
     "hero": {
       "tagline": "Transform Your Business",
@@ -178,21 +181,200 @@
   },
   "auth": {
     "signin": {
-      "title": "Sign In",
-      "email": "Email",
+      "title": "Welcome Back",
+      "subtitle": "Sign in to your FitFlow account",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
       "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "forgotPassword": "Forgot password?",
       "submit": "Sign In",
+      "submitting": "Signing in...",
       "noAccount": "Don't have an account?",
-      "signupLink": "Sign up"
+      "signupLink": "Start free trial",
+      "errors": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "passwordRequired": "Password is required",
+        "invalidCredentials": "Invalid email or password",
+        "emailNotVerified": "Please verify your email before signing in",
+        "serverError": "Something went wrong. Please try again."
+      },
+      "brandMessage": {
+        "title": "Transform Your Gym Management",
+        "description": "Join thousands of gym owners who trust FitFlow to streamline operations and grow their business.",
+        "features": {
+          "feature1": "30-day free trial",
+          "feature2": "No credit card required",
+          "feature3": "Cancel anytime"
+        }
+      }
     },
     "signup": {
-      "title": "Create Account",
-      "name": "Full Name",
-      "email": "Email",
+      "title": "Start Your Free Trial",
+      "subtitle": "Create your account and get 30 days free",
+      "name": "Full name",
+      "namePlaceholder": "John Doe",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
       "password": "Password",
+      "confirmPassword": "Confirm password",
       "submit": "Create Account",
+      "submitting": "Creating account...",
       "hasAccount": "Already have an account?",
-      "signinLink": "Sign in"
+      "signinLink": "Sign in",
+      "passwordRequirements": {
+        "title": "Password must contain:",
+        "minLength": "At least 8 characters",
+        "uppercase": "One uppercase letter",
+        "lowercase": "One lowercase letter",
+        "number": "One number"
+      },
+      "success": {
+        "title": "Account Created!",
+        "message": "Please check your email to verify your account.",
+        "checkEmail": "We've sent a verification link to {email}"
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "emailExists": "An account with this email already exists",
+        "passwordRequired": "Password is required",
+        "passwordWeak": "Password does not meet requirements",
+        "confirmRequired": "Please confirm your password",
+        "passwordMismatch": "Passwords do not match",
+        "serverError": "Something went wrong. Please try again."
+      },
+      "brandMessage": {
+        "title": "Everything You Need to Succeed",
+        "description": "Powerful gym management software designed for modern fitness businesses.",
+        "features": {
+          "feature1": "Complete member management",
+          "feature2": "Automated billing & payments",
+          "feature3": "Real-time analytics",
+          "feature4": "Multi-language support"
+        }
+      }
+    },
+    "forgotPassword": {
+      "title": "Reset Your Password",
+      "subtitle": "Enter your email and we'll send you a reset link",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "submit": "Send Reset Link",
+      "submitting": "Sending...",
+      "backToSignin": "Back to sign in",
+      "success": {
+        "title": "Check Your Email",
+        "message": "If an account exists with {email}, you will receive a password reset link shortly.",
+        "note": "The link will expire in 1 hour."
+      },
+      "errors": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "serverError": "Something went wrong. Please try again."
+      }
+    },
+    "resetPassword": {
+      "title": "Create New Password",
+      "subtitle": "Enter your new password below",
+      "password": "New password",
+      "passwordPlaceholder": "Create a strong password",
+      "confirmPassword": "Confirm password",
+      "confirmPasswordPlaceholder": "Re-enter your password",
+      "submit": "Reset Password",
+      "submitting": "Resetting...",
+      "success": {
+        "title": "Password Reset Successful",
+        "message": "Your password has been updated.",
+        "signIn": "Sign in with new password"
+      },
+      "errors": {
+        "passwordRequired": "Password is required",
+        "passwordWeak": "Password does not meet requirements",
+        "confirmRequired": "Please confirm your password",
+        "passwordMismatch": "Passwords do not match",
+        "tokenInvalid": "This reset link is invalid or has expired",
+        "serverError": "Something went wrong. Please try again."
+      },
+      "passwordRequirements": {
+        "title": "Password must contain:",
+        "minLength": "At least 8 characters",
+        "uppercase": "One uppercase letter",
+        "lowercase": "One lowercase letter",
+        "number": "One number"
+      }
+    },
+    "verifyEmail": {
+      "title": "Verifying Your Email",
+      "verifying": "Please wait while we verify your email...",
+      "success": {
+        "title": "Email Verified!",
+        "message": "Your email has been successfully verified.",
+        "welcome": "Welcome to FitFlow! Your 30-day free trial has started.",
+        "signIn": "Sign in to continue"
+      },
+      "error": {
+        "title": "Verification Failed",
+        "invalidToken": "This verification link is invalid or has expired.",
+        "alreadyVerified": "This email has already been verified.",
+        "serverError": "Something went wrong. Please try again.",
+        "requestNew": "Request new verification email"
+      }
+    },
+    "verification": {
+      "title": "Verify your email address",
+      "message": "A verification email has been sent to your email address. Please check your inbox and click the verification link to activate your account.",
+      "didntReceive": "Didn't receive it?",
+      "resend": "Resend email",
+      "resending": "Sending...",
+      "success": "Verification email sent! Check your inbox.",
+      "error": "Failed to resend email. Please try again."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back, {name}!",
+    "description": "Manage your FitFlow license and monitor your active devices",
+    "error": "Error",
+    "errorMessage": "Could not load your account information. Please try again later.",
+    "license": {
+      "title": "Your License Key",
+      "description": "Use this key to activate FitFlow on your devices"
+    },
+    "trial": {
+      "title": "Free Trial Active",
+      "daysRemaining": "{days, plural, =0 {Trial expires today} =1 {1 day remaining} other {# days remaining}}",
+      "upgradeButton": "Upgrade Now"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "plan": {
+      "label": "Plan",
+      "trial": "Trial"
+    },
+    "devices": {
+      "label": "Devices"
+    },
+    "activatedDevices": {
+      "title": "Activated Devices",
+      "count": "{current} of {limit} devices activated",
+      "noDevices": "No devices activated yet",
+      "getStarted": "Download and install FitFlow to get started",
+      "deviceFallback": "{platform} Device",
+      "trialActive": "Trial: {days}d left",
+      "trialExpired": "Trial Expired",
+      "activatedLabel": "Activated",
+      "trialEndsLabel": "Trial ends"
+    },
+    "download": {
+      "title": "Download FitFlow",
+      "description": "Install FitFlow on your computer to get started. Use your license key to activate.",
+      "windows": "Download for Windows",
+      "mac": "Download for Mac",
+      "linux": "Download for Linux"
     }
   }
 }

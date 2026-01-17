@@ -6,7 +6,10 @@
       "testimonials": "Depoimentos",
       "download": "Download",
       "signIn": "Entrar",
-      "startFreeTrial": "Iniciar Teste Gratuito"
+      "startFreeTrial": "Iniciar Teste Gratuito",
+      "myAccount": "Minha Conta",
+      "dashboard": "Painel",
+      "logout": "Sair"
     },
     "hero": {
       "tagline": "Transforme Seu Negócio",
@@ -178,21 +181,191 @@
   },
   "auth": {
     "signin": {
-      "title": "Entrar",
-      "email": "Email",
+      "title": "Bem-vindo de Volta",
+      "subtitle": "Entre na sua conta FitFlow",
+      "email": "Endereço de e-mail",
+      "emailPlaceholder": "voce@exemplo.com",
       "password": "Senha",
+      "passwordPlaceholder": "Digite sua senha",
+      "forgotPassword": "Esqueceu sua senha?",
       "submit": "Entrar",
+      "submitting": "Entrando...",
       "noAccount": "Não tem uma conta?",
-      "signupLink": "Criar conta"
+      "signupLink": "Comece o teste grátis",
+      "errors": {
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "Por favor insira um e-mail válido",
+        "passwordRequired": "Senha é obrigatória",
+        "invalidCredentials": "E-mail ou senha incorretos",
+        "emailNotVerified": "Por favor verifique seu e-mail antes de entrar",
+        "serverError": "Algo deu errado. Por favor tente novamente."
+      },
+      "brandMessage": {
+        "title": "Transforme a Gestão da Sua Academia",
+        "description": "Junte-se a milhares de donos de academias que confiam no FitFlow para otimizar operações e crescer seus negócios.",
+        "features": {
+          "feature1": "Teste grátis de 30 dias",
+          "feature2": "Sem necessidade de cartão",
+          "feature3": "Cancele a qualquer momento"
+        }
+      }
     },
     "signup": {
-      "title": "Criar Conta",
-      "name": "Nome Completo",
-      "email": "Email",
+      "title": "Comece Seu Teste Grátis",
+      "subtitle": "Crie sua conta e ganhe 30 dias grátis",
+      "name": "Nome completo",
+      "namePlaceholder": "João Silva",
+      "email": "Endereço de e-mail",
+      "emailPlaceholder": "voce@exemplo.com",
       "password": "Senha",
+      "confirmPassword": "Confirmar senha",
       "submit": "Criar Conta",
+      "submitting": "Criando conta...",
       "hasAccount": "Já tem uma conta?",
-      "signinLink": "Entrar"
+      "signinLink": "Entrar",
+      "passwordRequirements": {
+        "title": "A senha deve conter:",
+        "minLength": "Pelo menos 8 caracteres",
+        "uppercase": "Uma letra maiúscula",
+        "lowercase": "Uma letra minúscula",
+        "number": "Um número"
+      },
+      "success": {
+        "title": "Conta Criada!",
+        "message": "Por favor verifique seu e-mail para verificar sua conta.",
+        "checkEmail": "Enviamos um link de verificação para {email}"
+      },
+      "errors": {
+        "nameRequired": "Nome é obrigatório",
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "Por favor insira um e-mail válido",
+        "emailExists": "Já existe uma conta com este e-mail",
+        "passwordRequired": "Senha é obrigatória",
+        "passwordWeak": "A senha não atende os requisitos",
+        "confirmRequired": "Por favor confirme sua senha",
+        "passwordMismatch": "As senhas não coincidem",
+        "serverError": "Algo deu errado. Por favor tente novamente."
+      },
+      "brandMessage": {
+        "title": "Tudo que Você Precisa para Ter Sucesso",
+        "description": "Software poderoso de gestão de academias projetado para negócios fitness modernos.",
+        "features": {
+          "feature1": "Gestão completa de membros",
+          "feature2": "Cobrança e pagamentos automáticos",
+          "feature3": "Análises em tempo real",
+          "feature4": "Suporte multilíngue"
+        }
+      }
+    },
+    "forgotPassword": {
+      "title": "Redefinir Sua Senha",
+      "subtitle": "Digite seu e-mail e enviaremos um link de redefinição",
+      "email": "Endereço de e-mail",
+      "emailPlaceholder": "voce@exemplo.com",
+      "submit": "Enviar Link",
+      "submitting": "Enviando...",
+      "backToSignin": "Voltar ao login",
+      "success": {
+        "title": "Verifique Seu E-mail",
+        "message": "Se existir uma conta com {email}, você receberá um link de redefinição em breve.",
+        "note": "O link expirará em 1 hora."
+      },
+      "errors": {
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "Por favor insira um e-mail válido",
+        "serverError": "Algo deu errado. Por favor tente novamente."
+      }
+    },
+    "resetPassword": {
+      "title": "Criar Nova Senha",
+      "subtitle": "Digite sua nova senha abaixo",
+      "password": "Nova senha",
+      "passwordPlaceholder": "Crie uma senha forte",
+      "confirmPassword": "Confirmar senha",
+      "confirmPasswordPlaceholder": "Digite sua senha novamente",
+      "submit": "Redefinir Senha",
+      "submitting": "Redefinindo...",
+      "success": {
+        "title": "Senha Redefinida com Sucesso",
+        "message": "Sua senha foi atualizada.",
+        "signIn": "Entre com sua nova senha"
+      },
+      "errors": {
+        "passwordRequired": "Senha é obrigatória",
+        "passwordWeak": "A senha não atende os requisitos",
+        "confirmRequired": "Por favor confirme sua senha",
+        "passwordMismatch": "As senhas não coincidem",
+        "tokenInvalid": "Este link é inválido ou expirou",
+        "serverError": "Algo deu errado. Por favor tente novamente."
+      },
+      "passwordRequirements": {
+        "title": "A senha deve conter:",
+        "minLength": "Pelo menos 8 caracteres",
+        "uppercase": "Uma letra maiúscula",
+        "lowercase": "Uma letra minúscula",
+        "number": "Um número"
+      }
+    },
+    "verifyEmail": {
+      "title": "Verificando Seu E-mail",
+      "verifying": "Por favor aguarde enquanto verificamos seu e-mail...",
+      "success": {
+        "title": "E-mail Verificado!",
+        "message": "Seu e-mail foi verificado com sucesso.",
+        "welcome": "Bem-vindo ao FitFlow! Seu teste grátis de 30 dias começou.",
+        "signIn": "Entre para continuar"
+      },
+      "error": {
+        "title": "Verificação Falhou",
+        "invalidToken": "Este link de verificação é inválido ou expirou.",
+        "alreadyVerified": "Este e-mail já foi verificado.",
+        "serverError": "Algo deu errado. Por favor tente novamente.",
+        "requestNew": "Solicitar novo e-mail de verificação"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Painel de Controle",
+    "welcome": "Bem-vindo de volta, {name}!",
+    "description": "Gerencie sua licença do FitFlow e monitore seus dispositivos ativos",
+    "error": "Erro",
+    "errorMessage": "Não foi possível carregar as informações da sua conta. Por favor, tente novamente mais tarde.",
+    "license": {
+      "title": "Sua Chave de Licença",
+      "description": "Use esta chave para ativar o FitFlow em seus dispositivos"
+    },
+    "trial": {
+      "title": "Teste Gratuito Ativo",
+      "daysRemaining": "{days, plural, =0 {O teste expira hoje} =1 {1 dia restante} other {# dias restantes}}",
+      "upgradeButton": "Atualizar Agora"
+    },
+    "status": {
+      "label": "Status"
+    },
+    "plan": {
+      "label": "Plano",
+      "trial": "Teste"
+    },
+    "devices": {
+      "label": "Dispositivos"
+    },
+    "activatedDevices": {
+      "title": "Dispositivos Ativados",
+      "count": "{current} de {limit} dispositivos ativados",
+      "noDevices": "Nenhum dispositivo ativado ainda",
+      "getStarted": "Baixe e instale o FitFlow para começar",
+      "deviceFallback": "Dispositivo {platform}",
+      "trialActive": "Teste: {days}d restantes",
+      "trialExpired": "Teste Expirado",
+      "activatedLabel": "Ativado",
+      "trialEndsLabel": "O teste termina"
+    },
+    "download": {
+      "title": "Baixar FitFlow",
+      "description": "Instale o FitFlow em seu computador para começar. Use sua chave de licença para ativar.",
+      "windows": "Baixar para Windows",
+      "mac": "Baixar para Mac",
+      "linux": "Baixar para Linux"
     }
   }
 }
