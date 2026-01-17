@@ -5,7 +5,7 @@ import {
   validatePassword,
 } from '@/lib/utils/password';
 import { generateToken, generateTokenExpiry } from '@/lib/utils/tokens';
-import { generateLicenseKey } from '@/lib/utils/license-key';
+import { generateLicenseKey } from '@/lib/license';
 import { sendVerificationEmail } from '@/lib/email/send';
 
 /**
@@ -62,8 +62,8 @@ export async function POST(request: NextRequest) {
     const verificationToken = generateToken(32);
     const verificationTokenExpiry = generateTokenExpiry(24); // 24 hours
 
-    // Generate license key
-    const licenseKey = generateLicenseKey();
+    // Generate license key (crypto-based, with DB uniqueness check)
+    const licenseKey = await generateLicenseKey();
 
     // Calculate trial period (30 days from now)
     const trialStartAt = new Date();
@@ -95,7 +95,15 @@ export async function POST(request: NextRequest) {
     });
 
     // Send verification email
-    await sendVerificationEmail(user.email, user.name, verificationToken);
+    try {
+      console.log('🔔 Attempting to send verification email to:', user.email);
+      await sendVerificationEmail(user.email, user.name, verificationToken);
+      console.log('✅ Verification email sent successfully');
+    } catch (emailError) {
+      console.error('❌ Failed to send verification email:', emailError);
+      // Don't fail registration if email fails, just log it
+      // User can still resend verification email later
+    }
 
     return NextResponse.json(
       {
@@ -113,6 +121,10 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error('Registration error:', error);
+    if (error instanceof Error) {
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
+    }
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
