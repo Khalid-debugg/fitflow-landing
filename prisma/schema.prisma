@@ -1,6 +1,3 @@
-// This is your Prisma schema file for FitFlow Landing Page
-// Learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,114 +8,83 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-// ============================================
-// User Model
-// ============================================
-model User {
-  id           String   @id @default(cuid())
-  email        String   @unique
-  name         String?
-  passwordHash String   @db.Text
-
-  // Email verification
-  emailVerified           DateTime? // null = not verified
-  verificationToken       String?   @db.VarChar(255)
-  verificationTokenExpiry DateTime?
-
-  // Password reset
-  resetToken       String?   @db.VarChar(255)
-  resetTokenExpiry DateTime?
-
-  // Localization preferences
-  language          String  @default("en") @db.VarChar(5) // en, ar, es, pt, fr, de
-  preferredCurrency String  @default("USD") @db.VarChar(3)
-  detectedCountry   String? @db.VarChar(2) // ISO 3166-1 alpha-2
-
-  // Trial tracking
-  trialStartAt DateTime @default(now())
-  trialEndAt   DateTime // +30 days from start
-
-  // Subscription tracking
-  subscriptionStatus String  @default("trial") @db.VarChar(20) // trial, active, cancelled, expired
-  subscriptionType   String? @db.VarChar(20) // subscription, perpetual
-  planTier           String? @db.VarChar(20) // basic, pro, enterprise
-  deviceLimit        Int     @default(1) // 1, 3, or 999999
-
-  // License key
-  licenseKey String? @unique @db.VarChar(100)
-
-  // LemonSqueezy integration
-  lemonSqueezyCustomerId     String? @db.VarChar(100)
-  lemonSqueezySubscriptionId String? @db.VarChar(100)
-
-  // Perpetual license tracking
-  perpetualLicensePurchasedAt  DateTime?
-  perpetualLicenseUpdatesUntil DateTime? // +1 year from purchase
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  // Relationships
-  activatedDevices ActivatedDevice[]
-  downloads        Download[]
-
-  @@index([email])
-  @@index([licenseKey])
-  @@index([subscriptionStatus])
-  @@index([createdAt])
-  @@index([verificationToken])
-  @@index([resetToken])
-}
-
-// ============================================
-// Device Activation Tracking Model
-// ============================================
 model ActivatedDevice {
-  id       String  @id @default(cuid())
-  userId   String
-  deviceId String  @db.VarChar(255) // Unique hardware fingerprint
-  deviceName String? @db.VarChar(100) // Optional: "Office PC"
-  platform   String  @db.VarChar(20) // windows, mac, linux
-  appVersion String  @db.VarChar(20) // Track installed version
-
+  id              String   @id @default(cuid())
+  userId          String
+  deviceId        String   @db.VarChar(255)
+  deviceName      String?  @db.VarChar(100)
+  platform        String   @db.VarChar(20)
+  appVersion      String   @db.VarChar(20)
   activatedAt     DateTime @default(now())
   lastValidatedAt DateTime @default(now())
   isActive        Boolean  @default(true)
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  trialStartedAt  DateTime?
+  trialEndsAt     DateTime?
+  trialUsed       Boolean  @default(false)
+  User            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([userId, deviceId])
-  @@index([userId])
-  @@index([lastValidatedAt])
   @@index([isActive])
-}
-
-// ============================================
-// Download History Model
-// ============================================
-model Download {
-  id       String @id @default(cuid())
-  userId   String
-  version  String @db.VarChar(20)
-  platform String @db.VarChar(20) // windows, mac, linux
-
-  downloadedAt DateTime @default(now())
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
+  @@index([lastValidatedAt])
   @@index([userId])
-  @@index([downloadedAt])
+  @@index([deviceId])
 }
 
-// ============================================
-// Currency Exchange Rates Model (cached daily)
-// ============================================
 model CurrencyRate {
   id          String   @id @default(cuid())
-  currency    String   @unique @db.VarChar(3) // "EGP", "SAR", etc.
-  rateToUSD   Float    @db.DoublePrecision // 1 USD = X currency
+  currency    String   @unique @db.VarChar(3)
+  rateToUSD   Float
   lastUpdated DateTime @default(now())
 
   @@index([currency])
   @@index([lastUpdated])
+}
+
+model Download {
+  id           String   @id @default(cuid())
+  userId       String
+  version      String   @db.VarChar(20)
+  platform     String   @db.VarChar(20)
+  downloadedAt DateTime @default(now())
+  User         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([downloadedAt])
+  @@index([userId])
+}
+
+model User {
+  id                           String            @id @default(cuid())
+  email                        String            @unique
+  name                         String?
+  passwordHash                 String
+  language                     String            @default("en") @db.VarChar(5)
+  preferredCurrency            String            @default("USD") @db.VarChar(3)
+  detectedCountry              String?           @db.VarChar(2)
+  trialStartAt                 DateTime          @default(now())
+  trialEndAt                   DateTime
+  subscriptionStatus           String            @default("trial") @db.VarChar(20)
+  subscriptionType             String?           @db.VarChar(20)
+  planTier                     String?           @db.VarChar(20)
+  deviceLimit                  Int               @default(1)
+  licenseKey                   String?           @unique @db.VarChar(100)
+  lemonSqueezyCustomerId       String?           @db.VarChar(100)
+  lemonSqueezySubscriptionId   String?           @db.VarChar(100)
+  perpetualLicensePurchasedAt  DateTime?
+  perpetualLicenseUpdatesUntil DateTime?
+  createdAt                    DateTime          @default(now())
+  updatedAt                    DateTime          @updatedAt
+  emailVerified                DateTime?
+  resetToken                   String?           @db.VarChar(255)
+  resetTokenExpiry             DateTime?
+  verificationToken            String?           @db.VarChar(255)
+  verificationTokenExpiry      DateTime?
+  ActivatedDevice              ActivatedDevice[]
+  Download                     Download[]
+
+  @@index([createdAt])
+  @@index([email])
+  @@index([licenseKey])
+  @@index([resetToken])
+  @@index([subscriptionStatus])
+  @@index([verificationToken])
 }
