@@ -153,7 +153,7 @@ model User {
   updatedAt              DateTime  @updatedAt
 
   // Relationships
-  activatedDevices       ActivatedDevice[]
+  ActivatedDevices       ActivatedDevice[]
   downloads              Download[]
 
   @@index([email])
@@ -400,10 +400,10 @@ fitflow-landing/
 - [x] Handle loading/error states
 
 ### ⏳ Phase 12: License Key System
-- [ ] Generate unique license keys (crypto-based)
-- [ ] Store license keys securely
-- [ ] License key validation logic
-- [ ] Associate license with user account
+- [x] Generate unique license keys (crypto-based)
+- [x] Store license keys securely
+- [x] License key validation logic
+- [x] Associate license with user account
 
 ### ⏳ Phase 13: Device Activation API
 - [ ] POST /api/license/activate endpoint
