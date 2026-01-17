@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { ThemeProvider } from 'next-themes'
 import { Antonio, Inter } from 'next/font/google'
+import { TopLoader } from '@/components/ui/TopLoader'
 import '../globals.css'
 
 const antonio = Antonio({
@@ -41,6 +42,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
       <body className={`${inter.variable} ${antonio.variable} font-sans antialiased`}>
+        <TopLoader />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
