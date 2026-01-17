@@ -2,8 +2,15 @@ import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { prisma } from '@/lib/db/prisma';
 import { comparePassword } from '@/lib/utils/password';
+import { CredentialsSignin } from 'next-auth';
+
+// Custom error class for invalid credentials
+class InvalidCredentialsError extends CredentialsSignin {
+  code = "Invalid credentials"
+}
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  trustHost: true,
   providers: [
     Credentials({
       name: 'credentials',
@@ -13,7 +20,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          return null;
+          throw new InvalidCredentialsError();
         }
 
         const email = credentials.email as string;
@@ -25,12 +32,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         });
 
         if (!user) {
-          return null;
-        }
-
-        // Check if email is verified
-        if (!user.emailVerified) {
-          throw new Error('Email not verified. Please check your inbox.');
+          throw new InvalidCredentialsError();
         }
 
         // Verify password
@@ -40,7 +42,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         );
 
         if (!isValidPassword) {
-          return null;
+          throw new InvalidCredentialsError();
         }
 
         // Return user object
@@ -73,11 +75,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   pages: {
     signIn: '/auth/signin',
-    error: '/auth/error',
   },
   session: {
     strategy: 'jwt',
     maxAge: 30 * 24 * 60 * 60, // 30 days
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET,
 });
