@@ -16,17 +16,6 @@ export const prisma =
 
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
 
-// Graceful shutdown - disconnect Prisma on process termination
-if (process.env.NODE_ENV === 'production') {
-  const cleanup = async () => {
-    await prisma.$disconnect()
-    process.exit(0)
-  }
-
-  process.on('SIGTERM', cleanup)
-  process.on('SIGINT', cleanup)
-}
-
 // Helper function to test database connectivity with retry logic
 export async function testDatabaseConnection(maxRetries = 3, delayMs = 1000): Promise<boolean> {
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
