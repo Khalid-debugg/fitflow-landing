@@ -1,6 +1,5 @@
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
-import { auth } from '@/lib/auth/auth';
 import { NextRequest, NextResponse } from 'next/server';
 
 // Create i18n middleware
@@ -38,11 +37,14 @@ export default async function middleware(request: NextRequest) {
     pathWithoutLocale.startsWith(route)
   );
 
-  // Get session
-  const session = await auth();
+  // Check session using the session cookie instead of importing auth()
+  // NextAuth v5 uses a session cookie by default
+  const sessionToken = request.cookies.get('authjs.session-token') ||
+                       request.cookies.get('__Secure-authjs.session-token');
+  const hasSession = !!sessionToken;
 
   // Redirect to signin if trying to access protected route without auth
-  if (isProtectedRoute && !session) {
+  if (isProtectedRoute && !hasSession) {
     const locale = pathnameHasLocale ? pathname.split('/')[1] : routing.defaultLocale;
     const signInUrl = new URL(`/${locale}/auth/signin`, request.url);
     signInUrl.searchParams.set('callbackUrl', pathname);
@@ -50,7 +52,7 @@ export default async function middleware(request: NextRequest) {
   }
 
   // Redirect to dashboard if trying to access auth routes while logged in
-  if (isAuthRoute && session) {
+  if (isAuthRoute && hasSession) {
     const locale = pathnameHasLocale ? pathname.split('/')[1] : routing.defaultLocale;
     return NextResponse.redirect(new URL(`/${locale}/dashboard`, request.url));
   }
@@ -63,3 +65,6 @@ export const config = {
   // Match only internationalized pathnames and exclude API routes
   matcher: ['/', '/(ar|de|en|es|fr|pt)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)'],
 }
+
+// Use Edge runtime explicitly (default in Next.js, but being explicit)
+export const runtime = 'edge';
