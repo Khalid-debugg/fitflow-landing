@@ -89,10 +89,17 @@ export async function validateLicenseKey(
   }
 }
 
+interface UserData {
+  subscriptionStatus: string;
+  trialEndAt: Date;
+  subscriptionType: string | null;
+  perpetualLicensePurchasedAt: Date | null;
+}
+
 /**
  * Check if user's subscription is valid
  */
-function checkSubscriptionStatus(user: any): LicenseValidationResult {
+function checkSubscriptionStatus(user: UserData): LicenseValidationResult {
   const now = new Date()
 
   // Check trial expiry
