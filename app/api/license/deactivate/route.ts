@@ -8,30 +8,19 @@ import { auth } from '@/lib/auth/auth';
  */
 const deactivationSchema = z.object({
   deviceId: z.string().min(1, 'Device ID is required'),
+  licenseKey: z.string().optional(), // Optional for backward compatibility with web dashboard
 });
 
 type DeactivationRequest = z.infer<typeof deactivationSchema>;
 
 /**
  * POST /api/license/deactivate
- * Deactivate a device (requires authentication)
- * Users can deactivate their own devices from the dashboard
+ * Deactivate a device
+ * - Can be called from desktop app with licenseKey + deviceId
+ * - Can be called from web dashboard with session authentication
  */
 export async function POST(request: NextRequest) {
   try {
-    // Check authentication
-    const session = await auth();
-
-    if (!session || !session.user?.email) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: 'Authentication required',
-        },
-        { status: 401 }
-      );
-    }
-
     // Parse and validate request body
     const body = await request.json();
     const validationResult = deactivationSchema.safeParse(body);
@@ -47,21 +36,52 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { deviceId }: DeactivationRequest = validationResult.data;
+    const { deviceId, licenseKey }: DeactivationRequest = validationResult.data;
 
-    // Find user
-    const user = await prisma.user.findUnique({
-      where: { email: session.user.email },
-    });
+    let user;
 
-    if (!user) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: 'User not found',
-        },
-        { status: 404 }
-      );
+    // Check if licenseKey is provided (desktop app authentication)
+    if (licenseKey) {
+      user = await prisma.user.findUnique({
+        where: { licenseKey },
+      });
+
+      if (!user) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: 'Invalid license key',
+          },
+          { status: 404 }
+        );
+      }
+    } else {
+      // Fall back to session authentication (web dashboard)
+      const session = await auth();
+
+      if (!session || !session.user?.email) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: 'Authentication required. Provide either licenseKey or valid session.',
+          },
+          { status: 401 }
+        );
+      }
+
+      user = await prisma.user.findUnique({
+        where: { email: session.user.email },
+      });
+
+      if (!user) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: 'User not found',
+          },
+          { status: 404 }
+        );
+      }
     }
 
     // Find the device

@@ -69,7 +69,6 @@ export async function POST(request: NextRequest) {
       where: { licenseKey },
       include: {
         ActivatedDevice: {
-          where: { isActive: true },
           orderBy: { lastValidatedAt: 'asc' },
         },
       },
@@ -119,12 +118,54 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if this device is already activated (HARD BLOCK - no re-activation)
+    // Check if this device already exists (active or inactive)
     const existingDevice = user.ActivatedDevice.find((device) => device.deviceId === deviceId);
-    const activeDeviceCount = user.ActivatedDevice.length;
+    const activeDeviceCount = user.ActivatedDevice.filter((device) => device.isActive).length;
 
     if (existingDevice) {
-      // Update last validated timestamp for existing device
+      // If device exists but is inactive, reactivate it
+      if (!existingDevice.isActive) {
+        const reactivatedDevice = await prisma.activatedDevice.update({
+          where: { id: existingDevice.id },
+          data: {
+            isActive: true,
+            lastValidatedAt: new Date(),
+            deviceName: deviceName || existingDevice.deviceName,
+            platform: normalizedPlatform,
+            appVersion
+          }
+        });
+
+        // Generate signed license data for offline validation
+        const signedLicense = signLicenseData({
+          licenseKey: user.licenseKey!,
+          deviceId: reactivatedDevice.deviceId,
+          trialEndsAt: reactivatedDevice.trialEndsAt,
+          subscriptionStatus: user.subscriptionStatus,
+        });
+
+        return NextResponse.json(
+          {
+            success: true,
+            message: 'Device reactivated successfully',
+            data: {
+              deviceId: reactivatedDevice.deviceId,
+              deviceName: reactivatedDevice.deviceName,
+              activatedAt: reactivatedDevice.activatedAt.toISOString(),
+              devicesUsed: activeDeviceCount + 1,
+              deviceLimit: user.deviceLimit,
+              trialEndsAt: reactivatedDevice.trialEndsAt?.toISOString() || null,
+              trialUsed: reactivatedDevice.trialUsed,
+              subscriptionStatus: user.subscriptionStatus,
+              isTrialActive: reactivatedDevice.trialEndsAt ? new Date() < reactivatedDevice.trialEndsAt : false,
+              signedLicense,
+            },
+          },
+          { status: 200 }
+        );
+      }
+
+      // Device is already active, just update last validated timestamp
       await prisma.activatedDevice.update({
         where: { id: existingDevice.id },
         data: { lastValidatedAt: new Date() }
@@ -137,7 +178,6 @@ export async function POST(request: NextRequest) {
         trialEndsAt: existingDevice.trialEndsAt,
         subscriptionStatus: user.subscriptionStatus,
       });
-      // Count active devices
 
       return NextResponse.json(
         {
@@ -153,7 +193,7 @@ export async function POST(request: NextRequest) {
             trialUsed: existingDevice.trialUsed,
             subscriptionStatus: user.subscriptionStatus,
             isTrialActive: existingDevice.trialEndsAt ? new Date() < existingDevice.trialEndsAt : false,
-            signedLicense, // For offline validation
+            signedLicense,
           },
         },
         { status: 200 }
