@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Mail, X, Loader2, CheckCircle2 } from 'lucide-react'
-import { useTranslations } from 'next-intl'
 
 interface VerificationBannerProps {
   email: string
@@ -12,7 +11,6 @@ interface VerificationBannerProps {
 }
 
 export function VerificationBanner({ email, onDismiss }: VerificationBannerProps) {
-  const t = useTranslations('auth.verification')
   const [isResending, setIsResending] = useState(false)
   const [resendSuccess, setResendSuccess] = useState(false)
   const [resendError, setResendError] = useState<string | null>(null)

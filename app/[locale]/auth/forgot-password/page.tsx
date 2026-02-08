@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Alert, AlertDescription } from '@/components/ui/alert'
-import { AlertCircle, Loader2, Mail, ArrowLeft, CheckCircle2 } from 'lucide-react'
+import { AlertCircle, Loader2, Mail, ArrowLeft } from 'lucide-react'
 
 export default function ForgotPasswordPage() {
   const t = useTranslations('auth.forgotPassword')
@@ -56,7 +56,7 @@ export default function ForgotPasswordPage() {
       }
 
       setSuccess(true)
-    } catch (error) {
+    } catch {
       setErrors({ general: t('errors.serverError') })
     } finally {
       setIsLoading(false)

@@ -71,7 +71,7 @@ export default function SignInPage() {
 
       // Success - redirect to dashboard or callback URL
       router.push(callbackUrl)
-    } catch (error) {
+    } catch {
       setErrors({ general: t('errors.serverError') })
     } finally {
       setIsLoading(false)

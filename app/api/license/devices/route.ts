@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db/prisma';
 import { auth } from '@/lib/auth/auth';
 
@@ -6,7 +6,7 @@ import { auth } from '@/lib/auth/auth';
  * GET /api/license/devices
  * Get all devices (active and inactive) for the authenticated user
  */
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Check authentication
     const session = await auth();

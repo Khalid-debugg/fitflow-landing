@@ -96,7 +96,7 @@ export default function ResetPasswordPage() {
       }
 
       setSuccess(true)
-    } catch (error) {
+    } catch {
       setErrors({ general: t('errors.serverError') })
     } finally {
       setIsLoading(false)

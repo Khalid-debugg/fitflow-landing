@@ -10,21 +10,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { convertPrice, convertPrices, getPricingTiers } from "@/lib/currency/convert";
 import { isSupportedCurrency, CurrencyCode } from "@/lib/currency/constants";
 
-// Request body types
-interface SingleConversionRequest {
-  amount: number;
-  targetCurrency: string;
-}
-
-interface BatchConversionRequest {
-  amounts: number[];
-  targetCurrency: string;
-}
-
-interface PricingTiersRequest {
-  targetCurrency: string;
-}
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
