@@ -52,6 +52,23 @@ model Download {
   @@index([userId])
 }
 
+model Backup {
+  id         String   @id @default(cuid())
+  userId     String
+  deviceId   String   @db.VarChar(255)
+  deviceName String?  @db.VarChar(100)
+  fileName   String   @db.VarChar(255)
+  fileSize   Int
+  fileUrl    String   @db.Text
+  checksum   String   @db.VarChar(64)
+  createdAt  DateTime @default(now())
+  User       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([deviceId])
+  @@index([createdAt])
+}
+
 model User {
   id                           String            @id @default(cuid())
   email                        String            @unique
@@ -80,6 +97,7 @@ model User {
   verificationTokenExpiry      DateTime?
   ActivatedDevice              ActivatedDevice[]
   Download                     Download[]
+  Backup                       Backup[]
 
   @@index([createdAt])
   @@index([email])
