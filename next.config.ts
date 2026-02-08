@@ -4,10 +4,8 @@ import createNextIntlPlugin from 'next-intl/plugin'
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts')
 
 const nextConfig: NextConfig = {
-  // Experimental features
-  experimental: {
-    typedRoutes: true,
-  },
+  // Typed routes (moved out of experimental in Next.js 16)
+  typedRoutes: true,
 }
 
 export default withNextIntl(nextConfig)

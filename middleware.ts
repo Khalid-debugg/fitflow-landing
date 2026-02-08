@@ -65,6 +65,3 @@ export const config = {
   // Match only internationalized pathnames and exclude API routes
   matcher: ['/', '/(ar|de|en|es|fr|pt)/:path*', '/((?!api|_next|_vercel|.*\\..*).*)'],
 }
-
-// Use Edge runtime explicitly (default in Next.js, but being explicit)
-export const runtime = 'edge';
