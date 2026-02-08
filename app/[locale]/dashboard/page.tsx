@@ -75,7 +75,7 @@ export default async function DashboardPage() {
   const now = new Date()
   const devicesWithTrialStatus = user.ActivatedDevice.map((device) => {
     const isTrialActive = device.trialEndsAt ? now < device.trialEndsAt : false
-    const isTrialExpired = device.trialEndsAt && now >= device.trialEndsAt
+    const isTrialExpired = device.trialEndsAt ? now >= device.trialEndsAt : false
 
     let trialDaysRemaining = 0
     if (device.trialEndsAt && isTrialActive) {
