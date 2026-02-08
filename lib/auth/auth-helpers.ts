@@ -54,7 +54,7 @@ export async function requireAuth(redirectTo: string = '/auth/signin') {
   const session = await auth();
 
   if (!session?.user) {
-    redirect(redirectTo);
+    redirect(redirectTo as any);
   }
 
   return session;
@@ -69,11 +69,11 @@ export async function requireVerifiedEmail(
   const user = await getServerUser();
 
   if (!user) {
-    redirect('/auth/signin');
+    redirect('/auth/signin' as any);
   }
 
   if (!user.emailVerified) {
-    redirect(redirectTo);
+    redirect(redirectTo as any);
   }
 
   return user;

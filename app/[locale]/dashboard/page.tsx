@@ -5,13 +5,17 @@ import { getTranslations } from 'next-intl/server'
 import { Header } from '@/components/landing/Header'
 import { DashboardContent } from '@/components/dashboard/DashboardContent'
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
   // Get current session
   const session = await auth()
 
   // Redirect to signin if not authenticated
   if (!session?.user?.email) {
-    redirect('/auth/signin')
+    redirect(`/${params.locale}/auth/signin` as any)
   }
 
   // Fetch user details including license key and devices

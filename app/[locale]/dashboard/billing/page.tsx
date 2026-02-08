@@ -7,11 +7,15 @@ import { Badge } from "@/components/ui/badge";
 import { CreditCard, Calendar, Package, AlertCircle } from "lucide-react";
 import Link from "next/link";
 
-export default async function BillingPage() {
+export default async function BillingPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
   const session = await auth();
 
   if (!session?.user?.id) {
-    redirect("/auth/signin");
+    redirect(`/${params.locale}/auth/signin` as any);
   }
 
   // Fetch user with subscription details
@@ -31,7 +35,7 @@ export default async function BillingPage() {
   });
 
   if (!user) {
-    redirect("/auth/signin");
+    redirect(`/${params.locale}/auth/signin` as any);
   }
 
   const getStatusBadge = (status: string) => {
