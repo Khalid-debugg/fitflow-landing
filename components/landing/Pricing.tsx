@@ -8,55 +8,47 @@ import { Badge } from '@/components/ui/badge'
 import { Check, Loader2 } from 'lucide-react'
 import { Link } from '@/i18n/routing'
 import { useCurrency } from '@/hooks/useCurrency'
+import { CheckoutModal } from '@/components/checkout/CheckoutModal'
+import type { PlanTier, BillingInterval } from '@/lib/payments/lemonsqueezy'
 
 const pricingData = {
   subscription: {
-    basic: { monthly: 29, yearly: 290 },
-    pro: { monthly: 59, yearly: 590 },
-    enterprise: { monthly: 99, yearly: 990 },
+    basic: { monthly: 9.99, annually: 101.99 },
+    pro: { monthly: 14.99, annually: 152.99 },
+    enterprise: { monthly: 29.99, annually: 305.99 },
   },
   perpetual: {
-    basic: 299,
-    pro: 599,
-    enterprise: 999,
+    basic: 99.99,
+    pro: 149.99,
+    enterprise: 299.99,
   },
-}
-
-const planFeatures = {
-  basic: [
-    'devices_basic',
-    'updates',
-    'support_basic',
-    false, // multilocation
-    false, // branding
-    false, // api
-  ],
-  pro: [
-    'devices_pro',
-    'updates',
-    'support_pro',
-    true, // multilocation
-    true, // branding
-    false, // api
-  ],
-  enterprise: [
-    'devices_enterprise',
-    'updates',
-    'support_enterprise',
-    true, // multilocation
-    true, // branding
-    true, // api
-  ],
 }
 
 type LicenseType = 'subscription' | 'perpetual'
-type BillingPeriod = 'monthly' | 'yearly'
+type BillingPeriod = 'monthly' | 'annually'
 
-export function Pricing() {
+interface PricingProps {
+  user?: {
+    id?: string
+    name?: string | null
+    email?: string
+  } | null
+}
+
+export function Pricing({ user }: PricingProps) {
   const t = useTranslations('landing.pricing')
   const [licenseType, setLicenseType] = useState<LicenseType>('subscription')
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>('monthly')
-  const { currency, isLoading, formatPrice, convertPrice } = useCurrency()
+  const { currency, isLoading, convertPrice } = useCurrency()
+
+  // Checkout modal state
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
+  const [selectedPlan, setSelectedPlan] = useState<{
+    tier: PlanTier
+    interval: BillingInterval
+    name: string
+    price: string
+  } | null>(null)
 
   const getPrice = (plan: 'basic' | 'pro' | 'enterprise') => {
     if (licenseType === 'perpetual') {
@@ -68,6 +60,27 @@ export function Pricing() {
   const getPeriodText = () => {
     if (licenseType === 'perpetual') return t('period.oneTime')
     return billingPeriod === 'monthly' ? t('period.month') : t('period.year')
+  }
+
+  const handlePlanSelect = (plan: 'basic' | 'pro' | 'enterprise') => {
+    // If user is logged in, open checkout modal
+    if (user?.id) {
+      const usdPrice = getPrice(plan)
+      const convertedPrice = convertPrice(usdPrice)
+      const formattedPrice = `${currency.symbol}${convertedPrice.toLocaleString()}`
+
+      const billingInterval: BillingInterval =
+        licenseType === 'perpetual' ? 'perpetual' : (billingPeriod === 'annually' ? 'ANNUALLY' : 'monthly')
+
+      setSelectedPlan({
+        tier: plan as PlanTier,
+        interval: billingInterval,
+        name: plan.charAt(0).toUpperCase() + plan.slice(1),
+        price: formattedPrice,
+      })
+      setIsCheckoutOpen(true)
+    }
+    // If not logged in, buttons will use Link to /auth/signup
   }
 
   const renderPrice = (plan: 'basic' | 'pro' | 'enterprise') => {
@@ -155,17 +168,17 @@ export function Pricing() {
                 Monthly
               </button>
               <button
-                onClick={() => setBillingPeriod('yearly')}
+                onClick={() => setBillingPeriod('annually')}
                 className={`px-4 py-1.5 rounded text-sm font-medium transition-all ${
-                  billingPeriod === 'yearly'
+                  billingPeriod === 'annually'
                     ? 'bg-background text-foreground shadow-sm'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
-                Yearly
-                {billingPeriod === 'yearly' && (
+                annually
+                {billingPeriod === 'annually' && (
                   <span className="ml-1.5 text-xs text-green-600 dark:text-green-400">
-                    (Save 17%)
+                    (Save 15%)
                   </span>
                 )}
               </button>
@@ -185,33 +198,51 @@ export function Pricing() {
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
-              <Button asChild className="w-full" variant="outline">
-                <Link href="/auth/signup">{t('plans.basic.cta')}</Link>
-              </Button>
+              {user?.id ? (
+                <Button onClick={() => handlePlanSelect('basic')} className="w-full" variant="outline">
+                  {t('plans.basic.ctaLoggedIn')}
+                </Button>
+              ) : (
+                <Button asChild className="w-full" variant="outline">
+                  <Link href="/auth/signup">{t('plans.basic.cta')}</Link>
+                </Button>
+              )}
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.devices_basic')}</span>
+                  <span className="text-sm">{t('features.basic.member_management')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{t('features.basic.checkin_system')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{t('features.basic.single_device')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-sm">
                     {licenseType === 'subscription'
-                      ? t('features.updates_subscription')
-                      : t('features.updates_perpetual')}
+                      ? t('features.support.immediate')
+                      : t('features.support.within_24hrs')}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.support_basic')}</span>
+                  <span className="text-sm">{t('features.pro.payment_tracking')}</span>
                 </li>
                 <li className="flex items-start gap-2 opacity-40">
                   <Check className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span className="text-sm line-through">{t('features.multilocation')}</span>
+                  <span className="text-sm line-through">{t('features.disabled.reports')}</span>
                 </li>
                 <li className="flex items-start gap-2 opacity-40">
                   <Check className="w-5 h-5 shrink-0 mt-0.5" />
-                  <span className="text-sm line-through">{t('features.branding')}</span>
+                  <span className="text-sm line-through">{t('features.disabled.whatsapp')}</span>
+                </li>
+                <li className="flex items-start gap-2 opacity-40">
+                  <Check className="w-5 h-5 shrink-0 mt-0.5" />
+                  <span className="text-sm line-through">{t('features.disabled.financial_dashboard')}</span>
                 </li>
               </ul>
             </CardContent>
@@ -232,33 +263,51 @@ export function Pricing() {
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
-              <Button asChild className="w-full">
-                <Link href="/auth/signup">{t('plans.pro.cta')}</Link>
-              </Button>
+              {user?.id ? (
+                <Button onClick={() => handlePlanSelect('pro')} className="w-full">
+                  {t('plans.pro.ctaLoggedIn')}
+                </Button>
+              ) : (
+                <Button asChild className="w-full">
+                  <Link href="/auth/signup">{t('plans.pro.cta')}</Link>
+                </Button>
+              )}
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.devices_pro')}</span>
+                  <span className="text-sm">{t('features.basic.member_management')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{t('features.basic.checkin_system')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{t('features.pro.multi_device_5')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-sm">
                     {licenseType === 'subscription'
-                      ? t('features.updates_subscription')
-                      : t('features.updates_perpetual')}
+                      ? t('features.support.immediate')
+                      : t('features.support.within_24hrs')}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.support_pro')}</span>
+                  <span className="text-sm">{t('features.pro.payment_tracking')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.multilocation')}</span>
+                  <span className="text-sm">{t('features.pro.reports_analytics')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.branding')}</span>
+                  <span className="text-sm">{t('features.enterprise.financial_dashboard')}</span>
+                </li>
+                <li className="flex items-start gap-2 opacity-40">
+                  <Check className="w-5 h-5 shrink-0 mt-0.5" />
+                  <span className="text-sm line-through">{t('features.disabled.whatsapp')}</span>
                 </li>
               </ul>
             </CardContent>
@@ -274,37 +323,51 @@ export function Pricing() {
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
-              <Button asChild className="w-full" variant="default">
-                <Link href="/contact">{t('plans.enterprise.cta')}</Link>
-              </Button>
+              {user?.id ? (
+                <Button onClick={() => handlePlanSelect('enterprise')} className="w-full" variant="default">
+                  {t('plans.enterprise.ctaLoggedIn')}
+                </Button>
+              ) : (
+                <Button asChild className="w-full" variant="default">
+                  <Link href="/auth/signup">{t('plans.enterprise.cta')}</Link>
+                </Button>
+              )}
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.devices_enterprise')}</span>
+                  <span className="text-sm">{t('features.basic.member_management')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{t('features.basic.checkin_system')}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm">{t('features.enterprise.unlimited_devices')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-sm">
                     {licenseType === 'subscription'
-                      ? t('features.updates_subscription')
-                      : t('features.updates_perpetual')}
+                      ? t('features.support.immediate')
+                      : t('features.support.within_24hrs')}
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.support_enterprise')}</span>
+                  <span className="text-sm">{t('features.pro.payment_tracking')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.multilocation')}</span>
+                  <span className="text-sm">{t('features.pro.reports_analytics')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.branding')}</span>
+                  <span className="text-sm">{t('features.pro.whatsapp_notifications')}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-sm">{t('features.api')}</span>
+                  <span className="text-sm">{t('features.enterprise.financial_dashboard')}</span>
                 </li>
               </ul>
             </CardContent>
@@ -313,9 +376,21 @@ export function Pricing() {
 
         {/* Note about trial */}
         <p className="text-center text-muted-foreground mt-12 text-sm">
-          All plans include a 30-day free trial. No credit card required.
+          {t('note')}
         </p>
       </div>
+
+      {/* Checkout Modal (only shows when user is logged in) */}
+      {user?.id && selectedPlan && (
+        <CheckoutModal
+          isOpen={isCheckoutOpen}
+          onClose={() => setIsCheckoutOpen(false)}
+          planTier={selectedPlan.tier}
+          billingInterval={selectedPlan.interval}
+          planName={selectedPlan.name}
+          price={selectedPlan.price}
+        />
+      )}
     </section>
   )
 }
