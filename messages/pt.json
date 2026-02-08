@@ -1,4 +1,29 @@
 {
+  "checkout": {
+    "modal": {
+      "title": {
+        "monthly": "Mensal",
+        "annually": "Anual",
+        "perpetual": "Licença Perpétua"
+      },
+      "description": "Complete sua compra para desbloquear todos os recursos",
+      "plan": "Plano",
+      "billing": {
+        "oneTime": "Pagamento único",
+        "monthly": "Cobrado mensalmente",
+        "annually": "Cobrado anualmente"
+      },
+      "button": {
+        "proceed": "Prosseguir para o Pagamento",
+        "loading": "Carregando pagamento..."
+      },
+      "success": {
+        "opened": "Pagamento aberto em uma nova janela.",
+        "popupBlocked": "Se não abriu, por favor desative seu bloqueador de pop-ups."
+      },
+      "footer": "Pagamento seguro com LemonSqueezy"
+    }
+  },
   "landing": {
     "nav": {
       "features": "Recursos",
@@ -92,18 +117,21 @@
         "basic": {
           "name": "Básico",
           "description": "Perfeito para academias pequenas e personal trainers",
-          "cta": "Iniciar Teste Gratuito"
+          "cta": "Iniciar Teste Gratuito",
+          "ctaLoggedIn": "Comprar Agora"
         },
         "pro": {
           "name": "Pro",
           "description": "Mais popular para centros fitness em crescimento",
           "badge": "Popular",
-          "cta": "Iniciar Teste Gratuito"
+          "cta": "Iniciar Teste Gratuito",
+          "ctaLoggedIn": "Comprar Agora"
         },
         "enterprise": {
           "name": "Enterprise",
           "description": "Para grandes academias e redes multi-unidades",
-          "cta": "Entrar em Contato"
+          "cta": "Entrar em Contato",
+          "ctaLoggedIn": "Comprar Agora"
         }
       },
       "features": {
@@ -112,16 +140,62 @@
         "devices_pro": "3 Dispositivos",
         "devices_enterprise": "Ilimitado",
         "updates": "Atualizações",
-        "updates_subscription": "Contínuas",
-        "updates_perpetual": "1 Ano",
+        "updates_subscription": "Atualizações regulares",
+        "updates_perpetual": "1 ano de atualizações",
         "support": "Suporte",
-        "support_basic": "Email",
+        "support_basic": "Suporte por email",
         "support_pro": "Email Prioritário",
         "support_enterprise": "Gerente Dedicado",
         "multilocation": "Multi-Unidade",
         "branding": "Marca Personalizada",
-        "api": "Acesso à API"
-      }
+        "api": "Acesso à API",
+        "basic": {
+          "everything": "Tudo no Básico, mais:",
+          "member_management": "Gestão de membros (visualizar, criar, editar)",
+          "checkin_system": "Sistema de check-in",
+          "plans_view": "Visualizar planos de adesão",
+          "membership_create": "Criar adesões",
+          "single_device": "1 ativação de dispositivo",
+          "email_support": "Suporte por email"
+        },
+        "pro": {
+          "everything": "Tudo no Pro, mais:",
+          "member_management_full": "Gestão completa de membros (excluir, exportar)",
+          "plans_management": "Criar e gerenciar planos de adesão",
+          "membership_management_full": "Gestão completa de adesões (editar, estender, renovar)",
+          "payment_tracking": "Rastreamento de pagamentos e pagamentos agendados",
+          "reports_analytics": "Relatórios e análises",
+          "whatsapp_notifications": "Notificações de vencimento por WhatsApp",
+          "multi_device_5": "Até 5 ativações de dispositivo",
+          "user_roles": "Funções de Treinador e Recepcionista",
+          "priority_support": "Suporte por email prioritário"
+        },
+        "enterprise": {
+          "financial_dashboard": "Painel financeiro e análise de receita",
+          "unlimited_devices": "Ativações de dispositivo ilimitadas",
+          "advanced_permissions": "Permissões avançadas e funções personalizadas",
+          "user_account_management": "Gestão completa de contas de usuário",
+          "backup_system": "Sistema de backup automatizado (diário/semanal/mensal)",
+          "api_access": "Acesso à API (em breve)",
+          "whatsapp_notifications": "Notificações de vencimento por WhatsApp",
+          "save_download_reports": "Salvar e baixar relatórios",
+          "unlimited_retention": "Retenção de dados ilimitada",
+          "multi_currency": "Suporte multi-moeda",
+          "dedicated_support": "Suporte dedicado e integração"
+        },
+        "disabled": {
+          "reports": "Relatórios e análises",
+          "payment_tracking": "Rastreamento de pagamentos",
+          "whatsapp": "Notificações de vencimento por WhatsApp",
+          "financial_dashboard": "Painel financeiro",
+          "advanced_permissions": "Permissões avançadas e funções personalizadas"
+        },
+        "support": {
+          "immediate": "Suporte imediato",
+          "within_24hrs": "Suporte em 24 horas"
+        }
+      },
+      "note": "Todos os planos incluem um teste gratuito de 30 dias. Não é necessário cartão de crédito."
     },
     "testimonials": {
       "heading": "Confiado por Proprietários de Academias no Mundo Todo",
@@ -322,6 +396,15 @@
         "serverError": "Algo deu errado. Por favor tente novamente.",
         "requestNew": "Solicitar novo e-mail de verificação"
       }
+    },
+    "verification": {
+      "title": "Verifique seu endereço de e-mail",
+      "message": "Um e-mail de verificação foi enviado para seu endereço de e-mail. Por favor, verifique sua caixa de entrada e clique no link de verificação para ativar sua conta.",
+      "didntReceive": "Não recebeu?",
+      "resend": "Reenviar e-mail",
+      "resending": "Enviando...",
+      "success": "E-mail de verificação enviado! Verifique sua caixa de entrada.",
+      "error": "Falha ao reenviar e-mail. Por favor, tente novamente."
     }
   },
   "dashboard": {
@@ -366,6 +449,52 @@
       "windows": "Baixar para Windows",
       "mac": "Baixar para Mac",
       "linux": "Baixar para Linux"
+    },
+    "cloudBackups": {
+      "title": "Backups na Nuvem",
+      "description": "Arquivos de backup sincronizados de seus dispositivos",
+      "noBackups": "Ainda não há backups na nuvem",
+      "noBackupsDesc": "Ative o backup na nuvem em seu aplicativo de desktop FitFlow para sincronizar seus dados automaticamente",
+      "loading": "Carregando backups...",
+      "error": "Falha ao carregar backups",
+      "tryAgain": "Tentar Novamente",
+      "thisDevice": "Este Dispositivo",
+      "download": "Baixar backup",
+      "delete": "Excluir backup",
+      "filter": {
+        "device": "Dispositivo:",
+        "allDevices": "Todos os Dispositivos"
+      },
+      "sort": {
+        "label": "Ordenar:",
+        "newestFirst": "Mais Recente Primeiro",
+        "oldestFirst": "Mais Antigo Primeiro"
+      },
+      "pagination": {
+        "pageOf": "Página {current} de {total}",
+        "previous": "Página anterior",
+        "next": "Próxima página"
+      },
+      "totalCount": "{count, plural, =0 {nenhum backup} =1 {1 backup} other {# backups}} no total"
+    }
+  },
+  "errors": {
+    "database": {
+      "title": "Voltaremos em breve",
+      "message": "Nosso sistema está acordando. Isso geralmente leva apenas um momento.",
+      "supabaseNote": "Às vezes nossos servidores precisam de uma atualização rápida. Por favor, tente novamente em alguns segundos.",
+      "retry": "Tentar Novamente",
+      "tryAgain": "Tentar Novamente"
+    },
+    "general": {
+      "title": "Ops! Algo inesperado aconteceu",
+      "message": "Não se preocupe, seus dados estão seguros. Vamos tentar carregar esta página novamente.",
+      "applicationError": "Ops! Algo deu errado"
+    },
+    "actions": {
+      "goHome": "Ir para o Início",
+      "contactSupport": "Ainda tendo problemas? Entre em contato com nossa equipe de suporte e nós ajudaremos você.",
+      "technicalDetails": "Detalhes Técnicos"
     }
   }
 }

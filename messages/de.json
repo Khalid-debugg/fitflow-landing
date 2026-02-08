@@ -1,4 +1,29 @@
 {
+  "checkout": {
+    "modal": {
+      "title": {
+        "monthly": "Monatlich",
+        "annually": "Jährlich",
+        "perpetual": "Unbefristete Lizenz"
+      },
+      "description": "Schließen Sie Ihren Kauf ab, um alle Funktionen freizuschalten",
+      "plan": "Plan",
+      "billing": {
+        "oneTime": "Einmalige Zahlung",
+        "monthly": "Monatlich abgerechnet",
+        "annually": "Jährlich abgerechnet"
+      },
+      "button": {
+        "proceed": "Zur Kasse Gehen",
+        "loading": "Kasse wird geladen..."
+      },
+      "success": {
+        "opened": "Kasse in neuem Fenster geöffnet.",
+        "popupBlocked": "Falls es nicht geöffnet wurde, deaktivieren Sie bitte Ihren Pop-up-Blocker."
+      },
+      "footer": "Sichere Zahlung mit LemonSqueezy"
+    }
+  },
   "landing": {
     "nav": {
       "features": "Funktionen",
@@ -92,18 +117,21 @@
         "basic": {
           "name": "Basic",
           "description": "Perfekt für kleine Studios und Personal Trainer",
-          "cta": "Kostenlose Testversion Starten"
+          "cta": "Kostenlose Testversion Starten",
+          "ctaLoggedIn": "Jetzt Kaufen"
         },
         "pro": {
           "name": "Pro",
           "description": "Am beliebtesten für wachsende Fitnesscenter",
           "badge": "Beliebt",
-          "cta": "Kostenlose Testversion Starten"
+          "cta": "Kostenlose Testversion Starten",
+          "ctaLoggedIn": "Jetzt Kaufen"
         },
         "enterprise": {
           "name": "Enterprise",
           "description": "Für große Studios und Ketten mit mehreren Standorten",
-          "cta": "Vertrieb Kontaktieren"
+          "cta": "Vertrieb Kontaktieren",
+          "ctaLoggedIn": "Jetzt Kaufen"
         }
       },
       "features": {
@@ -112,16 +140,62 @@
         "devices_pro": "3 Geräte",
         "devices_enterprise": "Unbegrenzt",
         "updates": "Updates",
-        "updates_subscription": "Kontinuierlich",
-        "updates_perpetual": "1 Jahr",
+        "updates_subscription": "Regelmäßige Updates",
+        "updates_perpetual": "1 Jahr Updates",
         "support": "Support",
-        "support_basic": "E-Mail",
+        "support_basic": "E-Mail-Support",
         "support_pro": "Prioritäts-E-Mail",
         "support_enterprise": "Dedizierter Manager",
         "multilocation": "Mehrere Standorte",
         "branding": "Individuelles Branding",
-        "api": "API-Zugriff"
-      }
+        "api": "API-Zugriff",
+        "basic": {
+          "everything": "Alles in Basic, plus:",
+          "member_management": "Mitgliederverwaltung (ansehen, erstellen, bearbeiten)",
+          "checkin_system": "Check-in-System",
+          "plans_view": "Mitgliedschaftspläne ansehen",
+          "membership_create": "Mitgliedschaften erstellen",
+          "single_device": "1 Geräteaktivierung",
+          "email_support": "E-Mail-Support"
+        },
+        "pro": {
+          "everything": "Alles in Pro, plus:",
+          "member_management_full": "Vollständige Mitgliederverwaltung (löschen, exportieren)",
+          "plans_management": "Mitgliedschaftspläne erstellen und verwalten",
+          "membership_management_full": "Vollständige Mitgliedschaftsverwaltung (bearbeiten, verlängern, erneuern)",
+          "payment_tracking": "Zahlungsverfolgung und geplante Zahlungen",
+          "reports_analytics": "Berichte und Analysen",
+          "whatsapp_notifications": "WhatsApp-Ablaufbenachrichtigungen",
+          "multi_device_5": "Bis zu 5 Geräteaktivierungen",
+          "user_roles": "Trainer- und Empfangsrollen",
+          "priority_support": "Prioritäts-E-Mail-Support"
+        },
+        "enterprise": {
+          "financial_dashboard": "Finanzdashboard und Umsatzanalysen",
+          "unlimited_devices": "Unbegrenzte Geräteaktivierungen",
+          "advanced_permissions": "Erweiterte Berechtigungen und benutzerdefinierte Rollen",
+          "user_account_management": "Vollständige Benutzerkontenverwaltung",
+          "backup_system": "Automatisches Backup-System (täglich/wöchentlich/monatlich)",
+          "api_access": "API-Zugriff (demnächst)",
+          "whatsapp_notifications": "WhatsApp-Ablaufbenachrichtigungen",
+          "save_download_reports": "Berichte speichern und herunterladen",
+          "unlimited_retention": "Unbegrenzte Datenspeicherung",
+          "multi_currency": "Mehrwährungsunterstützung",
+          "dedicated_support": "Dedizierter Support und Onboarding"
+        },
+        "disabled": {
+          "reports": "Berichte und Analysen",
+          "payment_tracking": "Zahlungsverfolgung",
+          "whatsapp": "WhatsApp-Ablaufbenachrichtigungen",
+          "financial_dashboard": "Finanzdashboard",
+          "advanced_permissions": "Erweiterte Berechtigungen und benutzerdefinierte Rollen"
+        },
+        "support": {
+          "immediate": "Sofortiger Support",
+          "within_24hrs": "Support innerhalb von 24 Stunden"
+        }
+      },
+      "note": "Alle Pläne beinhalten eine 30-tägige kostenlose Testversion. Keine Kreditkarte erforderlich."
     },
     "testimonials": {
       "heading": "Vertraut von Fitnessstudio-Betreibern Weltweit",
@@ -322,6 +396,15 @@
         "serverError": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
         "requestNew": "Neue Verifizierungs-E-Mail anfordern"
       }
+    },
+    "verification": {
+      "title": "Verifizieren Sie Ihre E-Mail-Adresse",
+      "message": "Eine Verifizierungs-E-Mail wurde an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang und klicken Sie auf den Verifizierungslink, um Ihr Konto zu aktivieren.",
+      "didntReceive": "Nicht erhalten?",
+      "resend": "E-Mail erneut senden",
+      "resending": "Wird gesendet...",
+      "success": "Verifizierungs-E-Mail gesendet! Überprüfen Sie Ihren Posteingang.",
+      "error": "Fehler beim erneuten Senden der E-Mail. Bitte versuchen Sie es erneut."
     }
   },
   "dashboard": {
@@ -366,6 +449,52 @@
       "windows": "Download für Windows",
       "mac": "Download für Mac",
       "linux": "Download für Linux"
+    },
+    "cloudBackups": {
+      "title": "Cloud-Backups",
+      "description": "Backup-Dateien, die von Ihren Geräten synchronisiert werden",
+      "noBackups": "Noch keine Cloud-Backups",
+      "noBackupsDesc": "Aktivieren Sie Cloud-Backup in Ihrer FitFlow-Desktop-Anwendung, um Ihre Daten automatisch zu synchronisieren",
+      "loading": "Backups werden geladen...",
+      "error": "Fehler beim Laden der Backups",
+      "tryAgain": "Erneut Versuchen",
+      "thisDevice": "Dieses Gerät",
+      "download": "Backup herunterladen",
+      "delete": "Backup löschen",
+      "filter": {
+        "device": "Gerät:",
+        "allDevices": "Alle Geräte"
+      },
+      "sort": {
+        "label": "Sortieren:",
+        "newestFirst": "Neueste Zuerst",
+        "oldestFirst": "Älteste Zuerst"
+      },
+      "pagination": {
+        "pageOf": "Seite {current} von {total}",
+        "previous": "Vorherige Seite",
+        "next": "Nächste Seite"
+      },
+      "totalCount": "{count, plural, =0 {keine Backups} =1 {1 Backup} other {# Backups}} insgesamt"
+    }
+  },
+  "errors": {
+    "database": {
+      "title": "Wir sind gleich wieder da",
+      "message": "Unser System wacht gerade auf. Das dauert normalerweise nur einen Moment.",
+      "supabaseNote": "Manchmal benötigen unsere Server eine kurze Auffrischung. Bitte versuchen Sie es in ein paar Sekunden erneut.",
+      "retry": "Erneut Versuchen",
+      "tryAgain": "Erneut Versuchen"
+    },
+    "general": {
+      "title": "Hoppla! Etwas Unerwartetes ist passiert",
+      "message": "Keine Sorge, Ihre Daten sind sicher. Lassen Sie uns diese Seite erneut laden.",
+      "applicationError": "Hoppla! Etwas ist schiefgelaufen"
+    },
+    "actions": {
+      "goHome": "Zur Startseite",
+      "contactSupport": "Haben Sie immer noch Probleme? Kontaktieren Sie unser Support-Team und wir helfen Ihnen.",
+      "technicalDetails": "Technische Details"
     }
   }
 }

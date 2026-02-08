@@ -1,4 +1,29 @@
 {
+  "checkout": {
+    "modal": {
+      "title": {
+        "monthly": "Mensual",
+        "annually": "Anual",
+        "perpetual": "Licencia Perpetua"
+      },
+      "description": "Completa tu compra para desbloquear todas las funciones",
+      "plan": "Plan",
+      "billing": {
+        "oneTime": "Pago único",
+        "monthly": "Facturado mensualmente",
+        "annually": "Facturado anualmente"
+      },
+      "button": {
+        "proceed": "Proceder al Pago",
+        "loading": "Cargando pago..."
+      },
+      "success": {
+        "opened": "Pago abierto en una nueva ventana.",
+        "popupBlocked": "Si no se abrió, por favor desactiva tu bloqueador de ventanas emergentes."
+      },
+      "footer": "Pago seguro con LemonSqueezy"
+    }
+  },
   "landing": {
     "nav": {
       "features": "Características",
@@ -92,18 +117,21 @@
         "basic": {
           "name": "Básico",
           "description": "Perfecto para gimnasios pequeños y entrenadores personales",
-          "cta": "Iniciar Prueba Gratuita"
+          "cta": "Iniciar Prueba Gratuita",
+          "ctaLoggedIn": "Comprar Ahora"
         },
         "pro": {
           "name": "Pro",
           "description": "Más popular para centros deportivos en crecimiento",
           "badge": "Popular",
-          "cta": "Iniciar Prueba Gratuita"
+          "cta": "Iniciar Prueba Gratuita",
+          "ctaLoggedIn": "Comprar Ahora"
         },
         "enterprise": {
           "name": "Enterprise",
           "description": "Para gimnasios grandes y cadenas multisede",
-          "cta": "Contactar Ventas"
+          "cta": "Contactar Ventas",
+          "ctaLoggedIn": "Comprar Ahora"
         }
       },
       "features": {
@@ -112,16 +140,62 @@
         "devices_pro": "3 Dispositivos",
         "devices_enterprise": "Ilimitado",
         "updates": "Actualizaciones",
-        "updates_subscription": "Continuas",
-        "updates_perpetual": "1 Año",
+        "updates_subscription": "Actualizaciones regulares",
+        "updates_perpetual": "1 año de actualizaciones",
         "support": "Soporte",
-        "support_basic": "Email",
+        "support_basic": "Soporte por email",
         "support_pro": "Email Prioritario",
         "support_enterprise": "Gestor Dedicado",
         "multilocation": "Multisede",
         "branding": "Marca Personalizada",
-        "api": "Acceso API"
-      }
+        "api": "Acceso API",
+        "basic": {
+          "everything": "Todo en Básico, además:",
+          "member_management": "Gestión de socios (ver, crear, editar)",
+          "checkin_system": "Sistema de registro",
+          "plans_view": "Ver planes de membresía",
+          "membership_create": "Crear membresías",
+          "single_device": "1 activación de dispositivo",
+          "email_support": "Soporte por email"
+        },
+        "pro": {
+          "everything": "Todo en Pro, además:",
+          "member_management_full": "Gestión completa de socios (eliminar, exportar)",
+          "plans_management": "Crear y gestionar planes de membresía",
+          "membership_management_full": "Gestión completa de membresías (editar, extender, renovar)",
+          "payment_tracking": "Seguimiento de pagos y pagos programados",
+          "reports_analytics": "Informes y análisis",
+          "whatsapp_notifications": "Notificaciones de vencimiento por WhatsApp",
+          "multi_device_5": "Hasta 5 activaciones de dispositivo",
+          "user_roles": "Roles de Entrenador y Recepcionista",
+          "priority_support": "Soporte por email prioritario"
+        },
+        "enterprise": {
+          "financial_dashboard": "Panel financiero y análisis de ingresos",
+          "unlimited_devices": "Activaciones de dispositivo ilimitadas",
+          "advanced_permissions": "Permisos avanzados y roles personalizados",
+          "user_account_management": "Gestión completa de cuentas de usuario",
+          "backup_system": "Sistema de respaldo automatizado (diario/semanal/mensual)",
+          "api_access": "Acceso API (próximamente)",
+          "whatsapp_notifications": "Notificaciones de vencimiento por WhatsApp",
+          "save_download_reports": "Guardar y descargar informes",
+          "unlimited_retention": "Retención de datos ilimitada",
+          "multi_currency": "Soporte multimoneda",
+          "dedicated_support": "Soporte dedicado e incorporación"
+        },
+        "disabled": {
+          "reports": "Informes y análisis",
+          "payment_tracking": "Seguimiento de pagos",
+          "whatsapp": "Notificaciones de vencimiento por WhatsApp",
+          "financial_dashboard": "Panel financiero",
+          "advanced_permissions": "Permisos avanzados y roles personalizados"
+        },
+        "support": {
+          "immediate": "Soporte inmediato",
+          "within_24hrs": "Soporte en 24 horas"
+        }
+      },
+      "note": "Todos los planes incluyen una prueba gratuita de 30 días. No se requiere tarjeta de crédito."
     },
     "testimonials": {
       "heading": "Confiado por Propietarios de Gimnasios en Todo el Mundo",
@@ -322,6 +396,15 @@
         "serverError": "Algo salió mal. Por favor intenta de nuevo.",
         "requestNew": "Solicitar nuevo correo de verificación"
       }
+    },
+    "verification": {
+      "title": "Verifica tu dirección de correo electrónico",
+      "message": "Se ha enviado un correo de verificación a tu dirección de correo electrónico. Por favor revisa tu bandeja de entrada y haz clic en el enlace de verificación para activar tu cuenta.",
+      "didntReceive": "¿No lo recibiste?",
+      "resend": "Reenviar correo",
+      "resending": "Enviando...",
+      "success": "¡Correo de verificación enviado! Revisa tu bandeja de entrada.",
+      "error": "Error al reenviar el correo. Por favor intenta de nuevo."
     }
   },
   "dashboard": {
@@ -366,6 +449,52 @@
       "windows": "Descargar para Windows",
       "mac": "Descargar para Mac",
       "linux": "Descargar para Linux"
+    },
+    "cloudBackups": {
+      "title": "Copias de Seguridad en la Nube",
+      "description": "Archivos de copia de seguridad sincronizados desde tus dispositivos",
+      "noBackups": "No hay copias de seguridad en la nube aún",
+      "noBackupsDesc": "Habilita la copia de seguridad en la nube en tu aplicación de escritorio FitFlow para sincronizar tus datos automáticamente",
+      "loading": "Cargando copias de seguridad...",
+      "error": "Error al cargar las copias de seguridad",
+      "tryAgain": "Intentar de Nuevo",
+      "thisDevice": "Este Dispositivo",
+      "download": "Descargar copia de seguridad",
+      "delete": "Eliminar copia de seguridad",
+      "filter": {
+        "device": "Dispositivo:",
+        "allDevices": "Todos los Dispositivos"
+      },
+      "sort": {
+        "label": "Ordenar:",
+        "newestFirst": "Más Reciente Primero",
+        "oldestFirst": "Más Antiguo Primero"
+      },
+      "pagination": {
+        "pageOf": "Página {current} de {total}",
+        "previous": "Página anterior",
+        "next": "Página siguiente"
+      },
+      "totalCount": "{count, plural, =0 {no hay copias de seguridad} =1 {1 copia de seguridad} other {# copias de seguridad}} en total"
+    }
+  },
+  "errors": {
+    "database": {
+      "title": "Volveremos enseguida",
+      "message": "Nuestro sistema se está activando. Esto suele tomar solo un momento.",
+      "supabaseNote": "A veces nuestros servidores necesitan un reinicio rápido. Por favor, inténtalo de nuevo en unos segundos.",
+      "retry": "Intentar de Nuevo",
+      "tryAgain": "Intentar de Nuevo"
+    },
+    "general": {
+      "title": "¡Ups! Algo inesperado sucedió",
+      "message": "No te preocupes, tus datos están seguros. Intentemos cargar esta página de nuevo.",
+      "applicationError": "¡Ups! Algo salió mal"
+    },
+    "actions": {
+      "goHome": "Ir al Inicio",
+      "contactSupport": "¿Sigues teniendo problemas? Contacta a nuestro equipo de soporte y te ayudaremos.",
+      "technicalDetails": "Detalles Técnicos"
     }
   }
 }

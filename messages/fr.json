@@ -1,4 +1,29 @@
 {
+  "checkout": {
+    "modal": {
+      "title": {
+        "monthly": "Mensuel",
+        "annually": "Annuel",
+        "perpetual": "Licence Perpétuelle"
+      },
+      "description": "Finalisez votre achat pour débloquer toutes les fonctionnalités",
+      "plan": "Plan",
+      "billing": {
+        "oneTime": "Paiement unique",
+        "monthly": "Facturé mensuellement",
+        "annually": "Facturé annuellement"
+      },
+      "button": {
+        "proceed": "Procéder au Paiement",
+        "loading": "Chargement du paiement..."
+      },
+      "success": {
+        "opened": "Paiement ouvert dans une nouvelle fenêtre.",
+        "popupBlocked": "Si elle ne s'est pas ouverte, veuillez désactiver votre bloqueur de pop-ups."
+      },
+      "footer": "Paiement sécurisé par LemonSqueezy"
+    }
+  },
   "landing": {
     "nav": {
       "features": "Fonctionnalités",
@@ -92,18 +117,21 @@
         "basic": {
           "name": "Basic",
           "description": "Parfait pour les petites salles et les coachs personnels",
-          "cta": "Démarrer l'Essai Gratuit"
+          "cta": "Démarrer l'Essai Gratuit",
+          "ctaLoggedIn": "Acheter Maintenant"
         },
         "pro": {
           "name": "Pro",
           "description": "Le plus populaire pour les centres de fitness en croissance",
           "badge": "Populaire",
-          "cta": "Démarrer l'Essai Gratuit"
+          "cta": "Démarrer l'Essai Gratuit",
+          "ctaLoggedIn": "Acheter Maintenant"
         },
         "enterprise": {
           "name": "Enterprise",
           "description": "Pour les grandes salles et les chaînes multi-sites",
-          "cta": "Contacter les Ventes"
+          "cta": "Contacter les Ventes",
+          "ctaLoggedIn": "Acheter Maintenant"
         }
       },
       "features": {
@@ -112,16 +140,62 @@
         "devices_pro": "3 Appareils",
         "devices_enterprise": "Illimité",
         "updates": "Mises à Jour",
-        "updates_subscription": "Continues",
-        "updates_perpetual": "1 An",
+        "updates_subscription": "Mises à jour régulières",
+        "updates_perpetual": "1 an de mises à jour",
         "support": "Support",
-        "support_basic": "Email",
+        "support_basic": "Support par e-mail",
         "support_pro": "Email Prioritaire",
         "support_enterprise": "Gestionnaire Dédié",
         "multilocation": "Multi-Sites",
         "branding": "Image de Marque Personnalisée",
-        "api": "Accès API"
-      }
+        "api": "Accès API",
+        "basic": {
+          "everything": "Tout ce qui est dans Basic, plus :",
+          "member_management": "Gestion des membres (voir, créer, modifier)",
+          "checkin_system": "Système d'enregistrement",
+          "plans_view": "Voir les plans d'adhésion",
+          "membership_create": "Créer des adhésions",
+          "single_device": "1 activation d'appareil",
+          "email_support": "Support par e-mail"
+        },
+        "pro": {
+          "everything": "Tout ce qui est dans Pro, plus :",
+          "member_management_full": "Gestion complète des membres (supprimer, exporter)",
+          "plans_management": "Créer et gérer les plans d'adhésion",
+          "membership_management_full": "Gestion complète des adhésions (modifier, prolonger, renouveler)",
+          "payment_tracking": "Suivi des paiements et paiements programmés",
+          "reports_analytics": "Rapports et analyses",
+          "whatsapp_notifications": "Notifications d'expiration WhatsApp",
+          "multi_device_5": "Jusqu'à 5 activations d'appareils",
+          "user_roles": "Rôles Coach et Réceptionniste",
+          "priority_support": "Support par e-mail prioritaire"
+        },
+        "enterprise": {
+          "financial_dashboard": "Tableau de bord financier et analyse des revenus",
+          "unlimited_devices": "Activations d'appareils illimitées",
+          "advanced_permissions": "Permissions avancées et rôles personnalisés",
+          "user_account_management": "Gestion complète des comptes utilisateurs",
+          "backup_system": "Système de sauvegarde automatisé (quotidien/hebdomadaire/mensuel)",
+          "api_access": "Accès API (bientôt disponible)",
+          "whatsapp_notifications": "Notifications d'expiration WhatsApp",
+          "save_download_reports": "Enregistrer et télécharger les rapports",
+          "unlimited_retention": "Rétention de données illimitée",
+          "multi_currency": "Support multi-devises",
+          "dedicated_support": "Support dédié et intégration"
+        },
+        "disabled": {
+          "reports": "Rapports et analyses",
+          "payment_tracking": "Suivi des paiements",
+          "whatsapp": "Notifications d'expiration WhatsApp",
+          "financial_dashboard": "Tableau de bord financier",
+          "advanced_permissions": "Permissions avancées et rôles personnalisés"
+        },
+        "support": {
+          "immediate": "Support immédiat",
+          "within_24hrs": "Support sous 24 heures"
+        }
+      },
+      "note": "Tous les forfaits incluent un essai gratuit de 30 jours. Aucune carte bancaire requise."
     },
     "testimonials": {
       "heading": "Fait Confiance par les Propriétaires de Salles dans le Monde Entier",
@@ -322,6 +396,15 @@
         "serverError": "Quelque chose s'est mal passé. Veuillez réessayer.",
         "requestNew": "Demander un nouvel e-mail de vérification"
       }
+    },
+    "verification": {
+      "title": "Vérifiez votre adresse e-mail",
+      "message": "Un e-mail de vérification a été envoyé à votre adresse e-mail. Veuillez vérifier votre boîte de réception et cliquer sur le lien de vérification pour activer votre compte.",
+      "didntReceive": "Vous ne l'avez pas reçu ?",
+      "resend": "Renvoyer l'e-mail",
+      "resending": "Envoi...",
+      "success": "E-mail de vérification envoyé ! Vérifiez votre boîte de réception.",
+      "error": "Échec du renvoi de l'e-mail. Veuillez réessayer."
     }
   },
   "dashboard": {
@@ -366,6 +449,52 @@
       "windows": "Télécharger pour Windows",
       "mac": "Télécharger pour Mac",
       "linux": "Télécharger pour Linux"
+    },
+    "cloudBackups": {
+      "title": "Sauvegardes Cloud",
+      "description": "Fichiers de sauvegarde synchronisés depuis vos appareils",
+      "noBackups": "Aucune sauvegarde cloud pour le moment",
+      "noBackupsDesc": "Activez la sauvegarde cloud dans votre application de bureau FitFlow pour synchroniser automatiquement vos données",
+      "loading": "Chargement des sauvegardes...",
+      "error": "Échec du chargement des sauvegardes",
+      "tryAgain": "Réessayer",
+      "thisDevice": "Cet Appareil",
+      "download": "Télécharger la sauvegarde",
+      "delete": "Supprimer la sauvegarde",
+      "filter": {
+        "device": "Appareil :",
+        "allDevices": "Tous les Appareils"
+      },
+      "sort": {
+        "label": "Trier :",
+        "newestFirst": "Plus Récent D'abord",
+        "oldestFirst": "Plus Ancien D'abord"
+      },
+      "pagination": {
+        "pageOf": "Page {current} sur {total}",
+        "previous": "Page précédente",
+        "next": "Page suivante"
+      },
+      "totalCount": "{count, plural, =0 {aucune sauvegarde} =1 {1 sauvegarde} other {# sauvegardes}} au total"
+    }
+  },
+  "errors": {
+    "database": {
+      "title": "Nous revenons tout de suite",
+      "message": "Notre système se réveille. Cela ne prend généralement qu'un instant.",
+      "supabaseNote": "Parfois, nos serveurs ont besoin d'un petit rafraîchissement. Veuillez réessayer dans quelques secondes.",
+      "retry": "Réessayer",
+      "tryAgain": "Réessayer"
+    },
+    "general": {
+      "title": "Oups ! Quelque chose d'inattendu s'est produit",
+      "message": "Ne vous inquiétez pas, vos données sont en sécurité. Essayons de recharger cette page.",
+      "applicationError": "Oups ! Quelque chose s'est mal passé"
+    },
+    "actions": {
+      "goHome": "Aller à l'Accueil",
+      "contactSupport": "Vous avez toujours des problèmes ? Contactez notre équipe d'assistance et nous vous aiderons.",
+      "technicalDetails": "Détails Techniques"
     }
   }
 }
