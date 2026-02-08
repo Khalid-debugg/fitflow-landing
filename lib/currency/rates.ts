@@ -28,7 +28,7 @@ async function fetchExchangeRates(): Promise<Record<CurrencyCode, number>> {
 
     // Filter to only our supported currencies
     const supportedCurrencies = getSupportedCurrencies();
-    const filteredRates: Record<CurrencyCode, number> = { USD: 1.0 } as any;
+    const filteredRates: Record<CurrencyCode, number> = { USD: 1.0 } as Record<CurrencyCode, number>;
 
     supportedCurrencies.forEach((currency) => {
       if (currency === "USD") {

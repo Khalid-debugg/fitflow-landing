@@ -3,7 +3,7 @@
  * Detects user's currency based on IP geolocation
  */
 
-import { CurrencyCode, getCurrencyForCountry } from "./constants";
+import { CurrencyCode, getCurrencyForCountry, isSupportedCurrency } from "./constants";
 
 const IPAPI_URL = "https://ipapi.co/json/";
 
@@ -111,9 +111,6 @@ export function validateCurrencyPreference(
   }
 
   const upperCurrency = currency.toUpperCase();
-
-  // Import at runtime to avoid circular dependency
-  const { isSupportedCurrency } = require("./constants");
 
   return isSupportedCurrency(upperCurrency) ? (upperCurrency as CurrencyCode) : "USD";
 }
