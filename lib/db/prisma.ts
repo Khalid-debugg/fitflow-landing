@@ -12,13 +12,36 @@ export const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
     log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
-    datasources: {
-      db: {
-        url: process.env.DATABASE_URL,
-      },
-    },
   })
 
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
+
+// Graceful shutdown - disconnect Prisma on process termination
+if (process.env.NODE_ENV === 'production') {
+  const cleanup = async () => {
+    await prisma.$disconnect()
+    process.exit(0)
+  }
+
+  process.on('SIGTERM', cleanup)
+  process.on('SIGINT', cleanup)
+}
+
+// Helper function to test database connectivity with retry logic
+export async function testDatabaseConnection(maxRetries = 3, delayMs = 1000): Promise<boolean> {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      await prisma.$queryRaw`SELECT 1`
+      return true
+    } catch (error) {
+      console.error(`Database connection attempt ${attempt}/${maxRetries} failed:`, error)
+
+      if (attempt < maxRetries) {
+        await new Promise(resolve => setTimeout(resolve, delayMs * attempt))
+      }
+    }
+  }
+  return false
+}
 
 export default prisma
