@@ -48,7 +48,7 @@ export function Testimonials() {
 
                 {/* Testimonial content */}
                 <p className="text-muted-foreground leading-relaxed">
-                  "{t(`items.${testimonial.key}.content`)}"
+                  &ldquo;{t(`items.${testimonial.key}.content`)}&rdquo;
                 </p>
 
                 {/* Author */}
