@@ -17,6 +17,7 @@ import {
   Zap
 } from 'lucide-react'
 import { VerificationBanner } from '@/components/auth/VerificationBanner'
+import { CloudBackupsSection } from '@/components/dashboard/CloudBackupsSection'
 
 interface Device {
   id: string
@@ -330,9 +331,14 @@ export function DashboardContent({ user, devices }: DashboardContentProps) {
             )}
           </div>
         </div>
+        {/* Cloud Backups Section */}
+        <CloudBackupsSection
+          licenseKey={user.licenseKey}
+        />
+
 
         {/* Download Section */}
-        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[700ms]">
+        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[900ms]">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary via-secondary to-secondary/80 p-8 text-secondary-foreground shadow-2xl">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
