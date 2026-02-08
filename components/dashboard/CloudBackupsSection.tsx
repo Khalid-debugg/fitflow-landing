@@ -222,7 +222,7 @@ export function CloudBackupsSection({ licenseKey }: CloudBackupsSectionProps) {
   }
 
   return (
-    <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[800ms]">
+    <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:800ms]">
       <div className="rounded-2xl bg-card border border-border p-8 shadow-lg">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-4">

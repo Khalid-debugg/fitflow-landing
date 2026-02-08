@@ -179,7 +179,7 @@ export function DashboardContent({ user, devices }: DashboardContentProps) {
           </div>
 
           {/* Devices */}
-          <div className="group animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[400ms]">
+          <div className="group animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:400ms]">
             <div className="relative overflow-hidden rounded-2xl bg-card border border-border p-6 transition-all hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
@@ -235,7 +235,7 @@ export function DashboardContent({ user, devices }: DashboardContentProps) {
         </div>
 
         {/* Activated Devices */}
-        <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[600ms]">
+        <div className="mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:600ms]">
           <div className="rounded-2xl bg-card border border-border p-8 shadow-lg">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 rounded-xl bg-accent/10 text-accent">
@@ -338,7 +338,7 @@ export function DashboardContent({ user, devices }: DashboardContentProps) {
 
 
         {/* Download Section */}
-        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-[900ms]">
+        <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:900ms]">
           <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-secondary via-secondary to-secondary/80 p-8 text-secondary-foreground shadow-2xl">
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
