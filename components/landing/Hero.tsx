@@ -6,7 +6,15 @@ import { ArrowRight, Award, Shield, Zap, BarChart3, Users, Clock } from 'lucide-
 import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 
-export function Hero() {
+interface HeroProps {
+  user?: {
+    id?: string
+    name?: string | null
+    email?: string
+  } | null
+}
+
+export function Hero({ user }: HeroProps = {}) {
   const t = useTranslations('landing.hero')
 
   return (
@@ -197,29 +205,32 @@ export function Hero() {
                 </div>
               </div>
             </div>
-                    {/* Bottom CTA Bar */}
-        <div className="flex items-center gap-4 justify-end">
-          <Button
-            asChild
-            variant="outline"
-            className="rounded-full px-6 group"
-          >
-            <Link href="/auth/login">
-              {t('cta.login', { default: 'Sign In' })}
-            </Link>
-          </Button>
 
-          <Button
-            asChild
-            size="lg"
-            className="rounded-full px-8 group shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
-          >
-            <Link href="/auth/signup">
-              {t('cta.primary', { default: 'Start Free Trial' })}
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-        </div>
+            {/* Bottom CTA Bar - Only show if user is NOT logged in */}
+            {!user?.id && (
+              <div className="flex items-center gap-4 justify-end">
+                <Button
+                  asChild
+                  variant="outline"
+                  className="rounded-full px-6 group"
+                >
+                  <Link href="/auth/signin">
+                    {t('cta.login', { default: 'Sign In' })}
+                  </Link>
+                </Button>
+
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full px-8 group shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all"
+                >
+                  <Link href="/auth/signup">
+                    {t('cta.primary', { default: 'Start Free Trial' })}
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>

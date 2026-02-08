@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/routing'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Moon, Sun, User, LayoutDashboard, LogOut } from 'lucide-react'
+import { Menu, X, Moon, Sun, LayoutDashboard, LogOut } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { LanguageSelector } from '@/components/LanguageSelector'
 import {
@@ -35,7 +35,7 @@ export function Header({ user }: HeaderProps = {}) {
     { name: t('nav.features'), href: '/#features' },
     { name: t('nav.pricing'), href: '/#pricing' },
     { name: t('nav.testimonials'), href: '/#testimonials' },
-    { name: t('nav.download'), href: '/download' },
+    { name: t('nav.download'), href: '/dashboard' },
   ]
 
   return (
