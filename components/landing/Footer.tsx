@@ -40,6 +40,7 @@ export function Footer() {
       links: [
         { key: 'privacy', href: '/privacy' },
         { key: 'terms', href: '/terms' },
+        { key: 'refund', href: '/refund' },
         { key: 'license', href: '/license' },
         { key: 'security', href: '/security' },
       ],
