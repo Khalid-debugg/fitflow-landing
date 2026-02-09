@@ -246,6 +246,7 @@
           "title": "Légal",
           "privacy": "Politique de Confidentialité",
           "terms": "Conditions d'Utilisation",
+          "refund": "Politique de Remboursement",
           "license": "Contrat de Licence",
           "security": "Sécurité"
         }
@@ -495,6 +496,114 @@
       "goHome": "Aller à l'Accueil",
       "contactSupport": "Vous avez toujours des problèmes ? Contactez notre équipe d'assistance et nous vous aiderons.",
       "technicalDetails": "Détails Techniques"
+    }
+  },
+  "policies": {
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "lastUpdated": "Dernière mise à jour : 9 février 2026",
+      "sections": {
+        "infoCollect": {
+          "title": "Informations que Nous Collectons",
+          "content": "Nous collectons des informations personnelles (nom, e-mail, détails de facturation), des données d'utilisation (adresse IP, type de navigateur) et les données de gestion de salle de sport que vous saisissez dans notre système."
+        },
+        "howWeUse": {
+          "title": "Comment Nous Utilisons Vos Données",
+          "content": "Nous utilisons vos informations pour fournir nos services, traiter les paiements, communiquer avec vous, améliorer notre plateforme et nous conformer aux obligations légales."
+        },
+        "dataSharing": {
+          "title": "Partage des Données",
+          "content": "Nous ne vendons pas vos données. Nous partageons les informations uniquement avec les prestataires de services (processeurs de paiement, services d'hébergement), lorsque la loi l'exige ou lors de transferts d'entreprise."
+        },
+        "security": {
+          "title": "Sécurité et Rétention",
+          "content": "Nous protégeons vos données en utilisant le cryptage, les contrôles d'accès et les mises à jour de sécurité régulières. Les données sont conservées selon les besoins pour la fourniture du service et supprimées dans les 90 jours suivant la suppression du compte."
+        },
+        "yourRights": {
+          "title": "Vos Droits",
+          "content": "Vous avez le droit d'accéder, de corriger, de supprimer ou d'exporter vos données. Vous pouvez également restreindre le traitement ou retirer votre consentement à tout moment via les paramètres de votre compte."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez désactiver les cookies dans les paramètres de votre navigateur, bien que certaines fonctionnalités puissent ne pas fonctionner correctement."
+        }
+      }
+    },
+    "terms": {
+      "title": "Conditions Générales",
+      "lastUpdated": "Dernière mise à jour : 9 février 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Acceptation des Conditions",
+          "content": "En utilisant FitFlow, vous acceptez ces conditions. Vous devez avoir au moins 18 ans et fournir des informations exactes lors de la création d'un compte. Vous êtes responsable du maintien de la sécurité du compte."
+        },
+        "service": {
+          "title": "2. Description du Service",
+          "content": "FitFlow est une plateforme de gestion de salle de sport offrant la gestion des membres, le traitement des paiements et des outils opérationnels. Nous pouvons modifier ou interrompre des fonctionnalités à tout moment."
+        },
+        "billing": {
+          "title": "3. Abonnement et Facturation",
+          "content": "Les abonnements sont facturés mensuellement ou annuellement à l'avance. Votre abonnement se renouvelle automatiquement sauf annulation avant la date de renouvellement. Nous pouvons modifier les tarifs avec un préavis. Les paiements échoués peuvent entraîner une suspension du service."
+        },
+        "cancellation": {
+          "title": "4. Annulation",
+          "content": "Vous pouvez annuler à tout moment depuis les paramètres de votre compte. L'accès se poursuit jusqu'à la fin de votre période de facturation. Consultez notre Politique de Remboursement pour plus d'informations sur les remboursements."
+        },
+        "yourData": {
+          "title": "5. Vos Données",
+          "content": "Vous conservez la propriété des données que vous saisissez. Vous nous accordez une licence pour les traiter pour la prestation du service. Vous êtes responsable de l'exactitude, de la légalité des données et de l'obtention des consentements nécessaires des membres."
+        },
+        "acceptableUse": {
+          "title": "6. Utilisation Acceptable",
+          "content": "N'utilisez pas FitFlow pour des activités illégales, ne tentez pas d'accès non autorisé, n'interférez pas avec le fonctionnement du service ou ne violez pas les droits d'autrui. Nous pouvons suspendre ou résilier les comptes qui violent ces conditions."
+        },
+        "intellectualProperty": {
+          "title": "7. Propriété Intellectuelle",
+          "content": "FitFlow possède tous les logiciels, designs et contenus (à l'exception de vos données). Vous ne pouvez pas copier, modifier ou distribuer notre service sans autorisation."
+        },
+        "liability": {
+          "title": "8. Limitation de Responsabilité",
+          "content": "FitFlow est fourni « tel quel » sans garanties. Nous ne sommes pas responsables des dommages indirects, de la perte de données ou des interruptions de service. Notre responsabilité totale est limitée aux montants que vous avez payés au cours des 12 derniers mois."
+        },
+        "termination": {
+          "title": "9. Résiliation",
+          "content": "Nous pouvons suspendre ou résilier votre compte en cas de violations, de non-paiement ou à notre discrétion. En cas de résiliation, vos données peuvent être supprimées après une période de rétention."
+        },
+        "changes": {
+          "title": "10. Modifications des Conditions",
+          "content": "Nous pouvons mettre à jour ces conditions à tout moment. L'utilisation continue après les modifications constitue une acceptation. Les modifications importantes seront communiquées par e-mail ou notification de service."
+        }
+      }
+    },
+    "refund": {
+      "title": "Politique de Remboursement",
+      "lastUpdated": "Dernière mise à jour : 9 février 2026",
+      "sections": {
+        "guarantee": {
+          "title": "Garantie Satisfait ou Remboursé de 30 Jours",
+          "content": "Les nouveaux abonnés peuvent demander un remboursement complet dans les 30 jours suivant leur premier achat. Cette garantie s'applique une fois par client et nécessite que vous ayez fait un effort de bonne foi pour utiliser le service."
+        },
+        "renewals": {
+          "title": "Renouvellements d'Abonnement",
+          "content": "Les renouvellements ne sont généralement pas remboursables. Cependant, nous pouvons offrir des remboursements au prorata pour les renouvellements accidentels dans les 7 jours si vous n'avez pas utilisé le service pendant la nouvelle période de facturation."
+        },
+        "cancellations": {
+          "title": "Annulations",
+          "content": "Vous pouvez annuler votre abonnement à tout moment. Vous conserverez l'accès jusqu'à la fin de votre période de facturation en cours, mais aucun remboursement ne sera émis pour le temps restant."
+        },
+        "exceptions": {
+          "title": "Exceptions",
+          "content": "Les remboursements ne sont pas disponibles pour : les résiliations de compte dues à des violations des conditions, les demandes faites plus de 60 jours après l'achat ou les changements d'avis après la période de garantie. Nous pouvons offrir des crédits de service pour des problèmes techniques ou des erreurs de facturation."
+        },
+        "howToRequest": {
+          "title": "Comment Demander",
+          "content": "Contactez notre équipe d'assistance via le tableau de bord de votre compte avec votre demande de remboursement. Incluez les détails de votre commande et la raison. Les remboursements approuvés sont traités dans les 5 à 10 jours ouvrables selon votre méthode de paiement d'origine."
+        },
+        "dataAfter": {
+          "title": "Données Après Remboursement",
+          "content": "Après remboursement, votre accès au compte se termine immédiatement. Vos données sont conservées pendant 90 jours au cas où vous souhaiteriez vous réabonner, puis définitivement supprimées."
+        }
+      }
     }
   }
 }

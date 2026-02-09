@@ -246,6 +246,7 @@
           "title": "Legal",
           "privacy": "Política de Privacidad",
           "terms": "Términos de Servicio",
+          "refund": "Política de Reembolso",
           "license": "Acuerdo de Licencia",
           "security": "Seguridad"
         }
@@ -495,6 +496,114 @@
       "goHome": "Ir al Inicio",
       "contactSupport": "¿Sigues teniendo problemas? Contacta a nuestro equipo de soporte y te ayudaremos.",
       "technicalDetails": "Detalles Técnicos"
+    }
+  },
+  "policies": {
+    "privacy": {
+      "title": "Política de Privacidad",
+      "lastUpdated": "Última actualización: 9 de febrero de 2026",
+      "sections": {
+        "infoCollect": {
+          "title": "Información que Recopilamos",
+          "content": "Recopilamos información personal (nombre, correo electrónico, detalles de facturación), datos de uso (dirección IP, tipo de navegador) y datos de gestión del gimnasio que ingresas en nuestro sistema."
+        },
+        "howWeUse": {
+          "title": "Cómo Usamos tus Datos",
+          "content": "Utilizamos tu información para proporcionar nuestros servicios, procesar pagos, comunicarnos contigo, mejorar nuestra plataforma y cumplir con las obligaciones legales."
+        },
+        "dataSharing": {
+          "title": "Compartir Datos",
+          "content": "No vendemos tus datos. Compartimos información solo con proveedores de servicios (procesadores de pagos, servicios de alojamiento), cuando lo exige la ley o durante transferencias comerciales."
+        },
+        "security": {
+          "title": "Seguridad y Retención",
+          "content": "Protegemos tus datos mediante cifrado, controles de acceso y actualizaciones de seguridad regulares. Los datos se conservan según sea necesario para la prestación del servicio y se eliminan dentro de los 90 días posteriores a la eliminación de la cuenta."
+        },
+        "yourRights": {
+          "title": "Tus Derechos",
+          "content": "Tienes derecho a acceder, corregir, eliminar o exportar tus datos. También puedes restringir el procesamiento o retirar el consentimiento en cualquier momento a través de la configuración de tu cuenta."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Utilizamos cookies para mejorar tu experiencia. Puedes desactivar las cookies en la configuración de tu navegador, aunque es posible que algunas funciones no funcionen correctamente."
+        }
+      }
+    },
+    "terms": {
+      "title": "Términos y Condiciones",
+      "lastUpdated": "Última actualización: 9 de febrero de 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Aceptación de los Términos",
+          "content": "Al usar FitFlow, aceptas estos términos. Debes tener al menos 18 años y proporcionar información precisa al crear una cuenta. Eres responsable de mantener la seguridad de la cuenta."
+        },
+        "service": {
+          "title": "2. Descripción del Servicio",
+          "content": "FitFlow es una plataforma de gestión de gimnasios que proporciona gestión de miembros, procesamiento de pagos y herramientas operativas. Podemos modificar o descontinuar funciones en cualquier momento."
+        },
+        "billing": {
+          "title": "3. Suscripción y Facturación",
+          "content": "Las suscripciones se facturan mensual o anualmente por adelantado. Tu suscripción se renueva automáticamente a menos que la canceles antes de la fecha de renovación. Podemos cambiar los precios con aviso previo. Los pagos fallidos pueden resultar en la suspensión del servicio."
+        },
+        "cancellation": {
+          "title": "4. Cancelación",
+          "content": "Puedes cancelar en cualquier momento desde la configuración de tu cuenta. El acceso continúa hasta el final de tu período de facturación. Consulta nuestra Política de Reembolso para obtener información sobre reembolsos."
+        },
+        "yourData": {
+          "title": "5. Tus Datos",
+          "content": "Conservas la propiedad de los datos que ingresas. Nos otorgas una licencia para procesarlos para la prestación del servicio. Eres responsable de la precisión, legalidad y obtención de los consentimientos necesarios de los miembros."
+        },
+        "acceptableUse": {
+          "title": "6. Uso Aceptable",
+          "content": "No uses FitFlow para actividades ilegales, intentes acceso no autorizado, interfieras con el funcionamiento del servicio o violes los derechos de otros. Podemos suspender o terminar cuentas que violen estos términos."
+        },
+        "intellectualProperty": {
+          "title": "7. Propiedad Intelectual",
+          "content": "FitFlow posee todo el software, diseños y contenido (excepto tus datos). No puedes copiar, modificar o distribuir nuestro servicio sin permiso."
+        },
+        "liability": {
+          "title": "8. Limitación de Responsabilidad",
+          "content": "FitFlow se proporciona \"tal cual\" sin garantías. No somos responsables de daños indirectos, pérdida de datos o interrupciones del servicio. Nuestra responsabilidad total se limita a las cantidades que pagaste en los últimos 12 meses."
+        },
+        "termination": {
+          "title": "9. Terminación",
+          "content": "Podemos suspender o terminar tu cuenta por violaciones, falta de pago o a nuestra discreción. Tras la terminación, tus datos pueden eliminarse después de un período de retención."
+        },
+        "changes": {
+          "title": "10. Cambios en los Términos",
+          "content": "Podemos actualizar estos términos en cualquier momento. El uso continuo después de los cambios constituye aceptación. Los cambios materiales se comunicarán por correo electrónico o notificación del servicio."
+        }
+      }
+    },
+    "refund": {
+      "title": "Política de Reembolso",
+      "lastUpdated": "Última actualización: 9 de febrero de 2026",
+      "sections": {
+        "guarantee": {
+          "title": "Garantía de Devolución de Dinero de 30 Días",
+          "content": "Los nuevos suscriptores pueden solicitar un reembolso completo dentro de los 30 días de su primera compra. Esta garantía se aplica una vez por cliente y requiere que hayas hecho un esfuerzo de buena fe para usar el servicio."
+        },
+        "renewals": {
+          "title": "Renovaciones de Suscripción",
+          "content": "Las renovaciones generalmente no son reembolsables. Sin embargo, podemos ofrecer reembolsos prorrateados por renovaciones accidentales dentro de los 7 días si no has usado el servicio durante el nuevo período de facturación."
+        },
+        "cancellations": {
+          "title": "Cancelaciones",
+          "content": "Puedes cancelar tu suscripción en cualquier momento. Conservarás el acceso hasta el final de tu período de facturación actual, pero no se emitirá ningún reembolso por el tiempo restante."
+        },
+        "exceptions": {
+          "title": "Excepciones",
+          "content": "Los reembolsos no están disponibles para: terminaciones de cuenta debido a violaciones de términos, solicitudes realizadas más de 60 días después de la compra o cambios de opinión después del período de garantía. Podemos ofrecer créditos de servicio por problemas técnicos o errores de facturación."
+        },
+        "howToRequest": {
+          "title": "Cómo Solicitar",
+          "content": "Contacta a nuestro equipo de soporte a través del panel de tu cuenta con tu solicitud de reembolso. Incluye los detalles de tu pedido y el motivo. Los reembolsos aprobados se procesan dentro de 5-10 días hábiles a tu método de pago original."
+        },
+        "dataAfter": {
+          "title": "Datos Después del Reembolso",
+          "content": "Al reembolsar, tu acceso a la cuenta termina inmediatamente. Tus datos se conservan durante 90 días en caso de que desees volver a suscribirte, luego se eliminan permanentemente."
+        }
+      }
     }
   }
 }

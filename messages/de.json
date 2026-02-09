@@ -246,6 +246,7 @@
           "title": "Rechtliches",
           "privacy": "Datenschutzrichtlinie",
           "terms": "Nutzungsbedingungen",
+          "refund": "Rückerstattungsrichtlinie",
           "license": "Lizenzvereinbarung",
           "security": "Sicherheit"
         }
@@ -495,6 +496,114 @@
       "goHome": "Zur Startseite",
       "contactSupport": "Haben Sie immer noch Probleme? Kontaktieren Sie unser Support-Team und wir helfen Ihnen.",
       "technicalDetails": "Technische Details"
+    }
+  },
+  "policies": {
+    "privacy": {
+      "title": "Datenschutzrichtlinie",
+      "lastUpdated": "Zuletzt aktualisiert: 9. Februar 2026",
+      "sections": {
+        "infoCollect": {
+          "title": "Gesammelte Informationen",
+          "content": "Wir sammeln persönliche Informationen (Name, E-Mail, Rechnungsdetails), Nutzungsdaten (IP-Adresse, Browsertyp) und Fitness-Studio-Verwaltungsdaten, die Sie in unser System eingeben."
+        },
+        "howWeUse": {
+          "title": "Wie wir Ihre Daten verwenden",
+          "content": "Wir verwenden Ihre Informationen, um unsere Dienste bereitzustellen, Zahlungen abzuwickeln, mit Ihnen zu kommunizieren, unsere Plattform zu verbessern und rechtliche Verpflichtungen zu erfüllen."
+        },
+        "dataSharing": {
+          "title": "Datenweitergabe",
+          "content": "Wir verkaufen Ihre Daten nicht. Wir teilen Informationen nur mit Dienstleistern (Zahlungsabwickler, Hosting-Dienste), wenn gesetzlich vorgeschrieben oder bei Geschäftsübertragungen."
+        },
+        "security": {
+          "title": "Sicherheit und Aufbewahrung",
+          "content": "Wir schützen Ihre Daten durch Verschlüsselung, Zugriffskontrollen und regelmäßige Sicherheitsupdates. Daten werden nach Bedarf für die Dienstleistung aufbewahrt und innerhalb von 90 Tagen nach Kontolöschung gelöscht."
+        },
+        "yourRights": {
+          "title": "Ihre Rechte",
+          "content": "Sie haben das Recht, auf Ihre Daten zuzugreifen, sie zu korrigieren, zu löschen oder zu exportieren. Sie können die Verarbeitung auch jederzeit über Ihre Kontoeinstellungen einschränken oder die Einwilligung widerrufen."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "content": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Sie können Cookies in Ihren Browsereinstellungen deaktivieren, obwohl einige Funktionen möglicherweise nicht richtig funktionieren."
+        }
+      }
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen",
+      "lastUpdated": "Zuletzt aktualisiert: 9. Februar 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Annahme der Bedingungen",
+          "content": "Durch die Nutzung von FitFlow stimmen Sie diesen Bedingungen zu. Sie müssen mindestens 18 Jahre alt sein und genaue Informationen bei der Kontoerstellung angeben. Sie sind für die Sicherheit Ihres Kontos verantwortlich."
+        },
+        "service": {
+          "title": "2. Dienstbeschreibung",
+          "content": "FitFlow ist eine Fitness-Studio-Verwaltungsplattform, die Mitgliederverwaltung, Zahlungsabwicklung und operative Tools bietet. Wir können Funktionen jederzeit ändern oder einstellen."
+        },
+        "billing": {
+          "title": "3. Abonnement und Abrechnung",
+          "content": "Abonnements werden monatlich oder jährlich im Voraus abgerechnet. Ihr Abonnement verlängert sich automatisch, es sei denn, es wird vor dem Verlängerungsdatum gekündigt. Wir können die Preise mit Vorankündigung ändern. Fehlgeschlagene Zahlungen können zur Dienstaussetzung führen."
+        },
+        "cancellation": {
+          "title": "4. Kündigung",
+          "content": "Sie können jederzeit über Ihre Kontoeinstellungen kündigen. Der Zugriff bleibt bis zum Ende Ihres Abrechnungszeitraums bestehen. Weitere Informationen zur Rückerstattung finden Sie in unserer Rückerstattungsrichtlinie."
+        },
+        "yourData": {
+          "title": "5. Ihre Daten",
+          "content": "Sie behalten das Eigentum an den eingegebenen Daten. Sie erteilen uns eine Lizenz zur Verarbeitung für die Dienstleistung. Sie sind für die Richtigkeit, Rechtmäßigkeit und Einholung notwendiger Mitgliederzustimmungen verantwortlich."
+        },
+        "acceptableUse": {
+          "title": "6. Akzeptable Nutzung",
+          "content": "Verwenden Sie FitFlow nicht für illegale Aktivitäten, versuchen Sie keinen unbefugten Zugriff, stören Sie nicht den Dienstbetrieb oder verletzen Sie die Rechte anderer. Wir können Konten, die gegen diese Bedingungen verstoßen, aussetzen oder beenden."
+        },
+        "intellectualProperty": {
+          "title": "7. Geistiges Eigentum",
+          "content": "FitFlow besitzt alle Software, Designs und Inhalte (außer Ihren Daten). Sie dürfen unseren Service ohne Genehmigung nicht kopieren, ändern oder verteilen."
+        },
+        "liability": {
+          "title": "8. Haftungsbeschränkung",
+          "content": "FitFlow wird \"wie besehen\" ohne Garantien bereitgestellt. Wir haften nicht für indirekte Schäden, Datenverlust oder Dienstunterbrechungen. Unsere Gesamthaftung ist auf die in den letzten 12 Monaten gezahlten Beträge beschränkt."
+        },
+        "termination": {
+          "title": "9. Beendigung",
+          "content": "Wir können Ihr Konto wegen Verstößen, Nichtzahlung oder nach unserem Ermessen aussetzen oder beenden. Bei Beendigung können Ihre Daten nach einer Aufbewahrungsfrist gelöscht werden."
+        },
+        "changes": {
+          "title": "10. Änderungen der Bedingungen",
+          "content": "Wir können diese Bedingungen jederzeit aktualisieren. Die weitere Nutzung nach Änderungen stellt eine Akzeptanz dar. Wesentliche Änderungen werden per E-Mail oder Dienstbenachrichtigung mitgeteilt."
+        }
+      }
+    },
+    "refund": {
+      "title": "Rückerstattungsrichtlinie",
+      "lastUpdated": "Zuletzt aktualisiert: 9. Februar 2026",
+      "sections": {
+        "guarantee": {
+          "title": "30-Tage-Geld-zurück-Garantie",
+          "content": "Neue Abonnenten können innerhalb von 30 Tagen nach dem ersten Kauf eine vollständige Rückerstattung beantragen. Diese Garantie gilt einmal pro Kunde und erfordert, dass Sie einen ehrlichen Versuch unternommen haben, den Service zu nutzen."
+        },
+        "renewals": {
+          "title": "Abonnementverlängerungen",
+          "content": "Verlängerungen sind in der Regel nicht erstattungsfähig. Wir können jedoch anteilige Rückerstattungen für versehentliche Verlängerungen innerhalb von 7 Tagen anbieten, wenn Sie den Service während des neuen Abrechnungszeitraums nicht genutzt haben."
+        },
+        "cancellations": {
+          "title": "Kündigungen",
+          "content": "Sie können Ihr Abonnement jederzeit kündigen. Sie behalten den Zugriff bis zum Ende Ihres aktuellen Abrechnungszeitraums, aber es wird keine Rückerstattung für die verbleibende Zeit gewährt."
+        },
+        "exceptions": {
+          "title": "Ausnahmen",
+          "content": "Rückerstattungen sind nicht verfügbar für: Kontobeendigungen aufgrund von Verstößen gegen die Bedingungen, Anfragen, die mehr als 60 Tage nach dem Kauf gestellt wurden, oder Meinungsänderungen nach der Garantiezeit. Wir können Service-Guthaben für technische Probleme oder Abrechnungsfehler anbieten."
+        },
+        "howToRequest": {
+          "title": "Wie man anfragt",
+          "content": "Kontaktieren Sie unser Support-Team über Ihr Konto-Dashboard mit Ihrer Rückerstattungsanfrage. Geben Sie Ihre Bestelldetails und den Grund an. Genehmigte Rückerstattungen werden innerhalb von 5-10 Werktagen auf Ihre ursprüngliche Zahlungsmethode verarbeitet."
+        },
+        "dataAfter": {
+          "title": "Daten nach Rückerstattung",
+          "content": "Bei Rückerstattung endet Ihr Kontozugriff sofort. Ihre Daten werden für 90 Tage aufbewahrt, falls Sie erneut abonnieren möchten, und dann dauerhaft gelöscht."
+        }
+      }
     }
   }
 }
