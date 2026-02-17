@@ -581,19 +581,15 @@
       "sections": {
         "guarantee": {
           "title": "Garantia de Reembolso de 30 Dias",
-          "content": "Novos assinantes podem solicitar um reembolso total dentro de 30 dias da primeira compra. Esta garantia se aplica uma vez por cliente e requer que você tenha feito um esforço de boa fé para usar o serviço."
+          "content": "Oferecemos uma garantia de reembolso de 30 dias em todas as novas assinaturas. Se não estiver satisfeito por qualquer motivo, entre em contato conosco dentro de 30 dias da sua compra e emitiremos um reembolso total."
         },
         "renewals": {
           "title": "Renovações de Assinatura",
-          "content": "Renovações geralmente não são reembolsáveis. No entanto, podemos oferecer reembolsos proporcionais para renovações acidentais dentro de 7 dias se você não tiver usado o serviço durante o novo período de cobrança."
+          "content": "Renovações geralmente não são reembolsáveis. Se você acredita que uma renovação foi feita por engano, entre em contato conosco e analisaremos sua solicitação."
         },
         "cancellations": {
           "title": "Cancelamentos",
           "content": "Você pode cancelar sua assinatura a qualquer momento. Você manterá o acesso até o final do seu período de cobrança atual, mas nenhum reembolso será emitido pelo tempo restante."
-        },
-        "exceptions": {
-          "title": "Exceções",
-          "content": "Reembolsos não estão disponíveis para: encerramentos de conta devido a violações de termos, solicitações feitas mais de 60 dias após a compra ou mudanças de opinião após o período de garantia. Podemos oferecer créditos de serviço para problemas técnicos ou erros de cobrança."
         },
         "howToRequest": {
           "title": "Como Solicitar",

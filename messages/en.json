@@ -581,19 +581,15 @@
       "sections": {
         "guarantee": {
           "title": "30-Day Money-Back Guarantee",
-          "content": "New subscribers can request a full refund within 30 days of their first purchase. This guarantee applies once per customer and requires that you've made a good faith effort to use the service."
+          "content": "We offer a 30-day money-back guarantee on all new subscriptions. If you are not satisfied for any reason, contact us within 30 days of your purchase and we will issue a full refund."
         },
         "renewals": {
           "title": "Subscription Renewals",
-          "content": "Renewals are generally non-refundable. However, we may offer prorated refunds for accidental renewals within 7 days if you haven't used the service during the new billing period."
+          "content": "Renewals are generally non-refundable. If you believe a renewal was made in error, please contact us and we will review your request."
         },
         "cancellations": {
           "title": "Cancellations",
           "content": "You can cancel your subscription anytime. You'll retain access until the end of your current billing period, but no refund will be issued for the remaining time."
-        },
-        "exceptions": {
-          "title": "Exceptions",
-          "content": "Refunds are not available for: account terminations due to terms violations, requests made more than 60 days after purchase, or changes of mind after the guarantee period. We may offer service credits for technical issues or billing errors."
         },
         "howToRequest": {
           "title": "How to Request",

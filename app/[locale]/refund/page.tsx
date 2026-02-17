@@ -40,11 +40,6 @@ export default async function RefundPage() {
           </section>
 
           <section className="mb-6">
-            <h2 className="text-2xl font-semibold mb-3">{t('sections.exceptions.title')}</h2>
-            <p>{t('sections.exceptions.content')}</p>
-          </section>
-
-          <section className="mb-6">
             <h2 className="text-2xl font-semibold mb-3">{t('sections.howToRequest.title')}</h2>
             <p>{t('sections.howToRequest.content')}</p>
           </section>

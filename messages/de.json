@@ -581,19 +581,15 @@
       "sections": {
         "guarantee": {
           "title": "30-Tage-Geld-zurück-Garantie",
-          "content": "Neue Abonnenten können innerhalb von 30 Tagen nach dem ersten Kauf eine vollständige Rückerstattung beantragen. Diese Garantie gilt einmal pro Kunde und erfordert, dass Sie einen ehrlichen Versuch unternommen haben, den Service zu nutzen."
+          "content": "Wir bieten eine 30-tägige Geld-zurück-Garantie für alle neuen Abonnements. Wenn Sie aus irgendeinem Grund nicht zufrieden sind, kontaktieren Sie uns innerhalb von 30 Tagen nach Ihrem Kauf und wir erstatten Ihnen den vollen Betrag."
         },
         "renewals": {
           "title": "Abonnementverlängerungen",
-          "content": "Verlängerungen sind in der Regel nicht erstattungsfähig. Wir können jedoch anteilige Rückerstattungen für versehentliche Verlängerungen innerhalb von 7 Tagen anbieten, wenn Sie den Service während des neuen Abrechnungszeitraums nicht genutzt haben."
+          "content": "Verlängerungen sind in der Regel nicht erstattungsfähig. Wenn Sie der Meinung sind, dass eine Verlängerung versehentlich erfolgt ist, kontaktieren Sie uns bitte und wir prüfen Ihre Anfrage."
         },
         "cancellations": {
           "title": "Kündigungen",
           "content": "Sie können Ihr Abonnement jederzeit kündigen. Sie behalten den Zugriff bis zum Ende Ihres aktuellen Abrechnungszeitraums, aber es wird keine Rückerstattung für die verbleibende Zeit gewährt."
-        },
-        "exceptions": {
-          "title": "Ausnahmen",
-          "content": "Rückerstattungen sind nicht verfügbar für: Kontobeendigungen aufgrund von Verstößen gegen die Bedingungen, Anfragen, die mehr als 60 Tage nach dem Kauf gestellt wurden, oder Meinungsänderungen nach der Garantiezeit. Wir können Service-Guthaben für technische Probleme oder Abrechnungsfehler anbieten."
         },
         "howToRequest": {
           "title": "Wie man anfragt",

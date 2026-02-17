@@ -581,19 +581,15 @@
       "sections": {
         "guarantee": {
           "title": "Garantía de Devolución de Dinero de 30 Días",
-          "content": "Los nuevos suscriptores pueden solicitar un reembolso completo dentro de los 30 días de su primera compra. Esta garantía se aplica una vez por cliente y requiere que hayas hecho un esfuerzo de buena fe para usar el servicio."
+          "content": "Ofrecemos una garantía de devolución de dinero de 30 días en todas las suscripciones nuevas. Si no estás satisfecho por cualquier motivo, contáctanos dentro de los 30 días de tu compra y te emitiremos un reembolso completo."
         },
         "renewals": {
           "title": "Renovaciones de Suscripción",
-          "content": "Las renovaciones generalmente no son reembolsables. Sin embargo, podemos ofrecer reembolsos prorrateados por renovaciones accidentales dentro de los 7 días si no has usado el servicio durante el nuevo período de facturación."
+          "content": "Las renovaciones generalmente no son reembolsables. Si crees que una renovación se realizó por error, contáctanos y revisaremos tu solicitud."
         },
         "cancellations": {
           "title": "Cancelaciones",
           "content": "Puedes cancelar tu suscripción en cualquier momento. Conservarás el acceso hasta el final de tu período de facturación actual, pero no se emitirá ningún reembolso por el tiempo restante."
-        },
-        "exceptions": {
-          "title": "Excepciones",
-          "content": "Los reembolsos no están disponibles para: terminaciones de cuenta debido a violaciones de términos, solicitudes realizadas más de 60 días después de la compra o cambios de opinión después del período de garantía. Podemos ofrecer créditos de servicio por problemas técnicos o errores de facturación."
         },
         "howToRequest": {
           "title": "Cómo Solicitar",

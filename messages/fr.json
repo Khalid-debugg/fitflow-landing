@@ -581,19 +581,15 @@
       "sections": {
         "guarantee": {
           "title": "Garantie Satisfait ou Remboursé de 30 Jours",
-          "content": "Les nouveaux abonnés peuvent demander un remboursement complet dans les 30 jours suivant leur premier achat. Cette garantie s'applique une fois par client et nécessite que vous ayez fait un effort de bonne foi pour utiliser le service."
+          "content": "Nous offrons une garantie satisfait ou remboursé de 30 jours sur tous les nouveaux abonnements. Si vous n'êtes pas satisfait pour quelque raison que ce soit, contactez-nous dans les 30 jours suivant votre achat et nous vous rembourserons intégralement."
         },
         "renewals": {
           "title": "Renouvellements d'Abonnement",
-          "content": "Les renouvellements ne sont généralement pas remboursables. Cependant, nous pouvons offrir des remboursements au prorata pour les renouvellements accidentels dans les 7 jours si vous n'avez pas utilisé le service pendant la nouvelle période de facturation."
+          "content": "Les renouvellements ne sont généralement pas remboursables. Si vous pensez qu'un renouvellement a été effectué par erreur, veuillez nous contacter et nous examinerons votre demande."
         },
         "cancellations": {
           "title": "Annulations",
           "content": "Vous pouvez annuler votre abonnement à tout moment. Vous conserverez l'accès jusqu'à la fin de votre période de facturation en cours, mais aucun remboursement ne sera émis pour le temps restant."
-        },
-        "exceptions": {
-          "title": "Exceptions",
-          "content": "Les remboursements ne sont pas disponibles pour : les résiliations de compte dues à des violations des conditions, les demandes faites plus de 60 jours après l'achat ou les changements d'avis après la période de garantie. Nous pouvons offrir des crédits de service pour des problèmes techniques ou des erreurs de facturation."
         },
         "howToRequest": {
           "title": "Comment Demander",
