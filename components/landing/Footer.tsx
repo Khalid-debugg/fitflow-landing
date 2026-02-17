@@ -48,10 +48,10 @@ export function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/fitflow', label: 'Twitter' },
-    { icon: Github, href: 'https://github.com/fitflow', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/fitflow', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:hello@fitflow.com', label: 'Email' },
+    { icon: Twitter, href: 'https://twitter.com/dumbbellflow', label: 'Twitter' },
+    { icon: Github, href: 'https://github.com/dumbbellflow', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/dumbbellflow', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:hello@dumbbellflow.com', label: 'Email' },
   ]
 
   return (
@@ -63,7 +63,7 @@ export function Footer() {
           <div className="col-span-2">
             <Link href="/" className="inline-block mb-4">
               <div className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                FitFlow
+                Dumbbellflow
               </div>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-xs">

@@ -38,7 +38,7 @@
     },
     "hero": {
       "tagline": "Transform Your Business",
-      "description": "With FitFlow, your gym doesn't just grow — it thrives. Our proven management system focuses on member engagement, revenue growth, and operational excellence.",
+      "description": "With Dumbbellflow, your gym doesn't just grow — it thrives. Our proven management system focuses on member engagement, revenue growth, and operational excellence.",
       "cta": {
         "primary": "Start Free Trial",
         "login": "Sign In",
@@ -199,12 +199,12 @@
     },
     "testimonials": {
       "heading": "Trusted by Gym Owners Worldwide",
-      "subtitle": "See what our customers have to say about FitFlow",
+      "subtitle": "See what our customers have to say about Dumbbellflow",
       "items": {
         "testimonial1": {
           "name": "Sarah Johnson",
           "role": "Owner, FitLife Gym",
-          "content": "FitFlow transformed how we manage our gym. The member tracking and automated billing have saved us hours every week. Highly recommended!"
+          "content": "Dumbbellflow transformed how we manage our gym. The member tracking and automated billing have saved us hours every week. Highly recommended!"
         },
         "testimonial2": {
           "name": "Michael Rodriguez",
@@ -219,7 +219,7 @@
       }
     },
     "footer": {
-      "tagline": "Transform your gym management with FitFlow",
+      "tagline": "Transform your gym management with Dumbbellflow",
       "sections": {
         "product": {
           "title": "Product",
@@ -251,13 +251,13 @@
           "security": "Security"
         }
       },
-      "copyright": "� 2026 FitFlow. All rights reserved."
+      "copyright": "� 2026 Dumbbellflow. All rights reserved."
     }
   },
   "auth": {
     "signin": {
       "title": "Welcome Back",
-      "subtitle": "Sign in to your FitFlow account",
+      "subtitle": "Sign in to your Dumbbellflow account",
       "email": "Email address",
       "emailPlaceholder": "you@example.com",
       "password": "Password",
@@ -277,7 +277,7 @@
       },
       "brandMessage": {
         "title": "Transform Your Gym Management",
-        "description": "Join thousands of gym owners who trust FitFlow to streamline operations and grow their business.",
+        "description": "Join thousands of gym owners who trust Dumbbellflow to streamline operations and grow their business.",
         "features": {
           "feature1": "30-day free trial",
           "feature2": "No credit card required",
@@ -387,7 +387,7 @@
       "success": {
         "title": "Email Verified!",
         "message": "Your email has been successfully verified.",
-        "welcome": "Welcome to FitFlow! Your 30-day free trial has started.",
+        "welcome": "Welcome to Dumbbellflow! Your 30-day free trial has started.",
         "signIn": "Sign in to continue"
       },
       "error": {
@@ -411,12 +411,12 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Welcome back, {name}!",
-    "description": "Manage your FitFlow license and monitor your active devices",
+    "description": "Manage your Dumbbellflow license and monitor your active devices",
     "error": "Error",
     "errorMessage": "Could not load your account information. Please try again later.",
     "license": {
       "title": "Your License Key",
-      "description": "Use this key to activate FitFlow on your devices"
+      "description": "Use this key to activate Dumbbellflow on your devices"
     },
     "trial": {
       "title": "Free Trial Active",
@@ -437,7 +437,7 @@
       "title": "Activated Devices",
       "count": "{current} of {limit} devices activated",
       "noDevices": "No devices activated yet",
-      "getStarted": "Download and install FitFlow to get started",
+      "getStarted": "Download and install Dumbbellflow to get started",
       "deviceFallback": "{platform} Device",
       "trialActive": "Trial: {days}d left",
       "trialExpired": "Trial Expired",
@@ -445,8 +445,8 @@
       "trialEndsLabel": "Trial ends"
     },
     "download": {
-      "title": "Download FitFlow",
-      "description": "Install FitFlow on your computer to get started. Use your license key to activate.",
+      "title": "Download Dumbbellflow",
+      "description": "Install Dumbbellflow on your computer to get started. Use your license key to activate.",
       "windows": "Download for Windows",
       "mac": "Download for Mac",
       "linux": "Download for Linux"
@@ -455,7 +455,7 @@
       "title": "Cloud Backups",
       "description": "Backup files synced from your devices",
       "noBackups": "No cloud backups yet",
-      "noBackupsDesc": "Enable cloud backup in your FitFlow desktop app to automatically sync your data",
+      "noBackupsDesc": "Enable cloud backup in your Dumbbellflow desktop app to automatically sync your data",
       "loading": "Loading backups...",
       "error": "Failed to load backups",
       "tryAgain": "Try Again",
@@ -535,11 +535,11 @@
       "sections": {
         "acceptance": {
           "title": "1. Acceptance of Terms",
-          "content": "By using FitFlow, you agree to these terms. You must be at least 18 years old and provide accurate information when creating an account. You are responsible for maintaining account security."
+          "content": "By using Dumbbellflow, you agree to these terms. You must be at least 18 years old and provide accurate information when creating an account. You are responsible for maintaining account security."
         },
         "service": {
           "title": "2. Service Description",
-          "content": "FitFlow is a gym management platform providing member management, payment processing, and operational tools. We may modify or discontinue features at any time."
+          "content": "Dumbbellflow is a gym management platform providing member management, payment processing, and operational tools. We may modify or discontinue features at any time."
         },
         "billing": {
           "title": "3. Subscription & Billing",
@@ -555,15 +555,15 @@
         },
         "acceptableUse": {
           "title": "6. Acceptable Use",
-          "content": "Do not use FitFlow for illegal activities, attempt unauthorized access, interfere with service operation, or violate others' rights. We may suspend or terminate accounts that violate these terms."
+          "content": "Do not use Dumbbellflow for illegal activities, attempt unauthorized access, interfere with service operation, or violate others' rights. We may suspend or terminate accounts that violate these terms."
         },
         "intellectualProperty": {
           "title": "7. Intellectual Property",
-          "content": "FitFlow owns all software, designs, and content (excluding your data). You may not copy, modify, or distribute our service without permission."
+          "content": "Dumbbellflow owns all software, designs, and content (excluding your data). You may not copy, modify, or distribute our service without permission."
         },
         "liability": {
           "title": "8. Limitation of Liability",
-          "content": "FitFlow is provided \"as is\" without warranties. We are not liable for indirect damages, data loss, or service interruptions. Our total liability is limited to amounts you paid in the past 12 months."
+          "content": "Dumbbellflow is provided \"as is\" without warranties. We are not liable for indirect damages, data loss, or service interruptions. Our total liability is limited to amounts you paid in the past 12 months."
         },
         "termination": {
           "title": "9. Termination",

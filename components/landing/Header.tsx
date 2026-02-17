@@ -48,7 +48,7 @@ export function Header({ user }: HeaderProps = {}) {
         >
           <div className="font-display text-2xl font-black tracking-tight relative group cursor-default" dir='ltr'>
             <span className="relative inline-block bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_hsl(var(--primary)/0.5)] animate-pulse-subtle">
-              Fit
+              Dumbbell
             </span>
             <span className="relative inline-block text-foreground drop-shadow-[0_4px_20px_hsl(var(--foreground)/0.3)] group-hover:drop-shadow-[0_4px_30px_hsl(var(--foreground)/0.5)] transition-all duration-300">
               Flow

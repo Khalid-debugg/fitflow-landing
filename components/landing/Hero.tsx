@@ -27,11 +27,11 @@ export function Hero({ user }: HeroProps = {}) {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_2px,transparent_2px),linear-gradient(to_bottom,hsl(var(--border))_2px,transparent_2px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-20" />
 
       <div className="container relative z-10 px-4 py-8 mx-auto">
-        {/* FitFlow Title at Top Center */}
+        {/* Dumbbellflow Title at Top Center */}
         <div className="flex justify-center mb-16" dir='ltr'>
           <h2 className="font-display font-black text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tight relative group cursor-default">
             <span className="relative inline-block bg-gradient-to-r from-primary via-primary/90 to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_hsl(var(--primary)/0.5)] animate-pulse-subtle">
-              Fit
+              Dumbbell
             </span>
             <span className="relative inline-block text-foreground drop-shadow-[0_4px_20px_hsl(var(--foreground)/0.3)] group-hover:drop-shadow-[0_4px_30px_hsl(var(--foreground)/0.5)] transition-all duration-300">
               Flow
@@ -103,7 +103,7 @@ export function Hero({ user }: HeroProps = {}) {
 
               <p className="text-muted-foreground text-base leading-relaxed">
                 {t('description', {
-                  default: 'With FitFlow, your gym doesn\'t just grow — it thrives. Our proven management system focuses on member engagement, revenue growth, and operational excellence.'
+                  default: 'With Dumbbellflow, your gym doesn\'t just grow — it thrives. Our proven management system focuses on member engagement, revenue growth, and operational excellence.'
                 })}
               </p>
 

@@ -21,7 +21,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'FitFlow - Gym Management Software',
+  title: 'Dumbbellflow - Gym Management Software',
   description: 'Powerful software to manage members, payments, and operations for your fitness center',
 }
 

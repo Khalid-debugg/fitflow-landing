@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: false,
-          message: 'Your trial has expired. Please upgrade to continue using FitFlow.',
+          message: 'Your trial has expired. Please upgrade to continue using Dumbbellflow.',
         },
         { status: 403 }
       );
@@ -207,7 +207,7 @@ export async function POST(request: NextRequest) {
         {
           success: false,
           message: `Device limit reached (${activeDeviceCount}/${user.deviceLimit}). Please deactivate a device from your dashboard to activate a new one.`,
-          dashboardUrl: `${process.env.NEXTAUTH_URL || 'https://fitflow.com'}/dashboard`,
+          dashboardUrl: `${process.env.NEXTAUTH_URL || 'https://Dumbbellflow.com'}/dashboard`,
           devicesUsed: activeDeviceCount,
           deviceLimit: user.deviceLimit,
         },

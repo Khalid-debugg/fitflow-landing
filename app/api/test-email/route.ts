@@ -62,12 +62,12 @@ export async function GET(request: NextRequest) {
       text: 'This is a test email to verify your email configuration is working correctly.',
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333;">🧪 Test Email from FitFlow</h2>
+          <h2 style="color: #333;">🧪 Test Email from Dumbbellflow</h2>
           <p>This is a test email sent at <strong>${new Date().toLocaleString()}</strong></p>
           <p>If you received this, your Resend integration is working! 🎉</p>
           <hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;" />
           <p style="color: #666; font-size: 12px;">
-            Sent from FitFlow Email Test Endpoint<br />
+            Sent from Dumbbellflow Email Test Endpoint<br />
             To: ${toEmail}<br />
             From: ${process.env.RESEND_FROM_EMAIL}
           </p>

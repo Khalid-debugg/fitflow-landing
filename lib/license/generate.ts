@@ -3,7 +3,7 @@ import { prisma } from '@/lib/db/prisma'
 
 /**
  * Generate a unique license key in format: FF4A-9B2C-D8E1-7F3A-C5B9
- * - First segment starts with "FF" (FitFlow prefix)
+ * - First segment starts with "FF" (Dumbbellflow prefix)
  * - Uses crypto-random generation for security
  * - Includes checksum in last segment for validation
  * - Total: 5 segments of 4 characters each (20 chars + 4 dashes)

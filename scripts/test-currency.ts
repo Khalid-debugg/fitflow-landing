@@ -13,7 +13,7 @@ import {
   CurrencyCode,
 } from "../lib/currency";
 
-console.log("🧪 Testing FitFlow Currency System\n");
+console.log("🧪 Testing Dumbbellflow Currency System\n");
 console.log("=" .repeat(60));
 
 async function testExchangeRates() {

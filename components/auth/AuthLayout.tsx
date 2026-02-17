@@ -31,7 +31,7 @@ export function AuthLayout({
         <header className="flex items-center justify-between p-4 md:p-6">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="font-display text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent group-hover:opacity-80 transition-opacity">
-              FitFlow
+              Dumbbellflow
             </div>
           </Link>
 
@@ -55,7 +55,7 @@ export function AuthLayout({
 
         {/* Footer */}
         <footer className="p-4 md:p-6 text-center text-xs text-muted-foreground">
-          <p>© 2026 FitFlow. All rights reserved.</p>
+          <p>© 2026 Dumbbellflow. All rights reserved.</p>
         </footer>
       </div>
 

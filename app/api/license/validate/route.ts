@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
           trialDaysRemaining,
           hasActiveSubscription,
           requiresPayment: isTrialExpired && !hasActiveSubscription,
-          dashboardUrl: `${process.env.NEXTAUTH_URL || 'https://fitflow.com'}/dashboard`,
+          dashboardUrl: `${process.env.NEXTAUTH_URL || 'https://dumbbellflow.com'}/dashboard`,
         },
       },
       { status: 200 }

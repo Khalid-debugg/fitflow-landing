@@ -1,9 +1,9 @@
-# FitFlow Landing Page - Complete Project Plan
+# dumbbellflow Landing Page - Complete Project Plan
 
 ## 📋 Project Overview
 
-**Project:** FitFlow Landing Page & SaaS Platform
-**Purpose:** Marketing website + user management for FitFlow gym management desktop app
+**Project:** dumbbellflow Landing Page & SaaS Platform
+**Purpose:** Marketing website + user management for dumbbellflow gym management desktop app
 **Start Date:** January 2026
 **Status:** Phase 1-16 Complete ✅ | Payment Integration Implemented
 
@@ -221,7 +221,7 @@ model CurrencyRate {
 7. **User installs & launches app** → License activation screen
 8. **User enters license key** → Device activation request to API
 9. **API validates & stores device** → Check device limit
-10. **App activated** → Start using FitFlow
+10. **App activated** → Start using dumbbellflow
 
 ### During Trial (Days 1-30)
 - App validates license every 7 days
@@ -249,7 +249,7 @@ model CurrencyRate {
 ## 📁 Project Structure
 
 ```
-fitflow-landing/
+dumbbellflow-landing/
 ├── frontend/
 │   ├── app/
 │   │   ├── [locale]/              # Internationalized routes
@@ -653,7 +653,7 @@ DATABASE_URL="postgresql://postgres:[YOUR-PASSWORD]@db.[YOUR-PROJECT-REF].supaba
 
 # NextAuth
 NEXTAUTH_SECRET="random-secret-key-here"
-NEXTAUTH_URL="https://fitflow.com" # or http://localhost:3000
+NEXTAUTH_URL="https://dumbbellflow.com" # or http://localhost:3000
 
 # LemonSqueezy
 LEMONSQUEEZY_API_KEY="your-api-key"
@@ -662,7 +662,7 @@ LEMONSQUEEZY_WEBHOOK_SECRET="your-webhook-secret"
 
 # Resend (Email)
 RESEND_API_KEY="your-resend-api-key"
-RESEND_FROM_EMAIL="noreply@fitflow.com"
+RESEND_FROM_EMAIL="noreply@dumbbellflow.com"
 
 # Optional: Currency API
 EXCHANGE_RATE_API_KEY="" # Free tier doesn't need key

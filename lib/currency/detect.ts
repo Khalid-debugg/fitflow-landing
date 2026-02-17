@@ -29,7 +29,7 @@ export async function detectCurrencyFromIP(
 
     const response = await fetch(url, {
       headers: {
-        "User-Agent": "FitFlow-Landing/1.0",
+        "User-Agent": "Dumbbellflow-Landing/1.0",
       },
       // Don't cache this request since IP addresses vary
       cache: "no-store",

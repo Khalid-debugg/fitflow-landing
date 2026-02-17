@@ -38,7 +38,7 @@
     },
     "hero": {
       "tagline": "Transformieren Sie Ihr Geschäft",
-      "description": "Mit FitFlow wächst Ihr Studio nicht nur — es floriert. Unser bewährtes Verwaltungssystem konzentriert sich auf Mitglieder-Engagement, Umsatzwachstum und operative Exzellenz.",
+      "description": "Mit Dumbbellflow wächst Ihr Studio nicht nur — es floriert. Unser bewährtes Verwaltungssystem konzentriert sich auf Mitglieder-Engagement, Umsatzwachstum und operative Exzellenz.",
       "cta": {
         "primary": "Kostenlose Testversion Starten",
         "login": "Anmelden",
@@ -199,12 +199,12 @@
     },
     "testimonials": {
       "heading": "Vertraut von Fitnessstudio-Betreibern Weltweit",
-      "subtitle": "Erfahren Sie, was unsere Kunden über FitFlow sagen",
+      "subtitle": "Erfahren Sie, was unsere Kunden über Dumbbellflow sagen",
       "items": {
         "testimonial1": {
           "name": "Sarah Johnson",
           "role": "Inhaberin, FitLife Gym",
-          "content": "FitFlow hat die Art und Weise, wie wir unser Fitnessstudio verwalten, revolutioniert. Die Mitgliederverfolgung und automatische Abrechnung haben uns jede Woche Stunden gespart. Sehr empfehlenswert!"
+          "content": "Dumbbellflow hat die Art und Weise, wie wir unser Fitnessstudio verwalten, revolutioniert. Die Mitgliederverfolgung und automatische Abrechnung haben uns jede Woche Stunden gespart. Sehr empfehlenswert!"
         },
         "testimonial2": {
           "name": "Michael Rodriguez",
@@ -219,7 +219,7 @@
       }
     },
     "footer": {
-      "tagline": "Transformieren Sie Ihre Fitnessstudio-Verwaltung mit FitFlow",
+      "tagline": "Transformieren Sie Ihre Fitnessstudio-Verwaltung mit Dumbbellflow",
       "sections": {
         "product": {
           "title": "Produkt",
@@ -251,13 +251,13 @@
           "security": "Sicherheit"
         }
       },
-      "copyright": "© 2026 FitFlow. Alle Rechte vorbehalten."
+      "copyright": "© 2026 Dumbbellflow. Alle Rechte vorbehalten."
     }
   },
   "auth": {
     "signin": {
       "title": "Willkommen Zurück",
-      "subtitle": "Melden Sie sich bei Ihrem FitFlow-Konto an",
+      "subtitle": "Melden Sie sich bei Ihrem Dumbbellflow-Konto an",
       "email": "E-Mail-Adresse",
       "emailPlaceholder": "sie@beispiel.com",
       "password": "Passwort",
@@ -277,7 +277,7 @@
       },
       "brandMessage": {
         "title": "Transformieren Sie Ihre Fitness-Studio-Verwaltung",
-        "description": "Schließen Sie sich Tausenden von Fitness-Studio-Besitzern an, die FitFlow vertrauen, um Abläufe zu optimieren und ihr Geschäft auszubauen.",
+        "description": "Schließen Sie sich Tausenden von Fitness-Studio-Besitzern an, die Dumbbellflow vertrauen, um Abläufe zu optimieren und ihr Geschäft auszubauen.",
         "features": {
           "feature1": "30 Tage kostenlose Testversion",
           "feature2": "Keine Kreditkarte erforderlich",
@@ -387,7 +387,7 @@
       "success": {
         "title": "E-Mail Verifiziert!",
         "message": "Ihre E-Mail wurde erfolgreich verifiziert.",
-        "welcome": "Willkommen bei FitFlow! Ihre 30-tägige kostenlose Testversion hat begonnen.",
+        "welcome": "Willkommen bei Dumbbellflow! Ihre 30-tägige kostenlose Testversion hat begonnen.",
         "signIn": "Melden Sie sich an, um fortzufahren"
       },
       "error": {
@@ -411,12 +411,12 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Willkommen zurück, {name}!",
-    "description": "Verwalten Sie Ihre FitFlow-Lizenz und überwachen Sie Ihre aktiven Geräte",
+    "description": "Verwalten Sie Ihre Dumbbellflow-Lizenz und überwachen Sie Ihre aktiven Geräte",
     "error": "Fehler",
     "errorMessage": "Ihre Kontoinformationen konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
     "license": {
       "title": "Ihr Lizenzschlüssel",
-      "description": "Verwenden Sie diesen Schlüssel, um FitFlow auf Ihren Geräten zu aktivieren"
+      "description": "Verwenden Sie diesen Schlüssel, um Dumbbellflow auf Ihren Geräten zu aktivieren"
     },
     "trial": {
       "title": "Kostenlose Testversion Aktiv",
@@ -437,7 +437,7 @@
       "title": "Aktivierte Geräte",
       "count": "{current} von {limit} Geräten aktiviert",
       "noDevices": "Noch keine Geräte aktiviert",
-      "getStarted": "Laden Sie FitFlow herunter und installieren Sie es, um zu beginnen",
+      "getStarted": "Laden Sie Dumbbellflow herunter und installieren Sie es, um zu beginnen",
       "deviceFallback": "{platform} Gerät",
       "trialActive": "Testversion: {days}T verbleibend",
       "trialExpired": "Testversion Abgelaufen",
@@ -445,8 +445,8 @@
       "trialEndsLabel": "Testversion endet"
     },
     "download": {
-      "title": "FitFlow Herunterladen",
-      "description": "Installieren Sie FitFlow auf Ihrem Computer, um zu beginnen. Verwenden Sie Ihren Lizenzschlüssel zur Aktivierung.",
+      "title": "Dumbbellflow Herunterladen",
+      "description": "Installieren Sie Dumbbellflow auf Ihrem Computer, um zu beginnen. Verwenden Sie Ihren Lizenzschlüssel zur Aktivierung.",
       "windows": "Download für Windows",
       "mac": "Download für Mac",
       "linux": "Download für Linux"
@@ -455,7 +455,7 @@
       "title": "Cloud-Backups",
       "description": "Backup-Dateien, die von Ihren Geräten synchronisiert werden",
       "noBackups": "Noch keine Cloud-Backups",
-      "noBackupsDesc": "Aktivieren Sie Cloud-Backup in Ihrer FitFlow-Desktop-Anwendung, um Ihre Daten automatisch zu synchronisieren",
+      "noBackupsDesc": "Aktivieren Sie Cloud-Backup in Ihrer Dumbbellflow-Desktop-Anwendung, um Ihre Daten automatisch zu synchronisieren",
       "loading": "Backups werden geladen...",
       "error": "Fehler beim Laden der Backups",
       "tryAgain": "Erneut Versuchen",
@@ -535,11 +535,11 @@
       "sections": {
         "acceptance": {
           "title": "1. Annahme der Bedingungen",
-          "content": "Durch die Nutzung von FitFlow stimmen Sie diesen Bedingungen zu. Sie müssen mindestens 18 Jahre alt sein und genaue Informationen bei der Kontoerstellung angeben. Sie sind für die Sicherheit Ihres Kontos verantwortlich."
+          "content": "Durch die Nutzung von Dumbbellflow stimmen Sie diesen Bedingungen zu. Sie müssen mindestens 18 Jahre alt sein und genaue Informationen bei der Kontoerstellung angeben. Sie sind für die Sicherheit Ihres Kontos verantwortlich."
         },
         "service": {
           "title": "2. Dienstbeschreibung",
-          "content": "FitFlow ist eine Fitness-Studio-Verwaltungsplattform, die Mitgliederverwaltung, Zahlungsabwicklung und operative Tools bietet. Wir können Funktionen jederzeit ändern oder einstellen."
+          "content": "Dumbbellflow ist eine Fitness-Studio-Verwaltungsplattform, die Mitgliederverwaltung, Zahlungsabwicklung und operative Tools bietet. Wir können Funktionen jederzeit ändern oder einstellen."
         },
         "billing": {
           "title": "3. Abonnement und Abrechnung",
@@ -555,15 +555,15 @@
         },
         "acceptableUse": {
           "title": "6. Akzeptable Nutzung",
-          "content": "Verwenden Sie FitFlow nicht für illegale Aktivitäten, versuchen Sie keinen unbefugten Zugriff, stören Sie nicht den Dienstbetrieb oder verletzen Sie die Rechte anderer. Wir können Konten, die gegen diese Bedingungen verstoßen, aussetzen oder beenden."
+          "content": "Verwenden Sie Dumbbellflow nicht für illegale Aktivitäten, versuchen Sie keinen unbefugten Zugriff, stören Sie nicht den Dienstbetrieb oder verletzen Sie die Rechte anderer. Wir können Konten, die gegen diese Bedingungen verstoßen, aussetzen oder beenden."
         },
         "intellectualProperty": {
           "title": "7. Geistiges Eigentum",
-          "content": "FitFlow besitzt alle Software, Designs und Inhalte (außer Ihren Daten). Sie dürfen unseren Service ohne Genehmigung nicht kopieren, ändern oder verteilen."
+          "content": "Dumbbellflow besitzt alle Software, Designs und Inhalte (außer Ihren Daten). Sie dürfen unseren Service ohne Genehmigung nicht kopieren, ändern oder verteilen."
         },
         "liability": {
           "title": "8. Haftungsbeschränkung",
-          "content": "FitFlow wird \"wie besehen\" ohne Garantien bereitgestellt. Wir haften nicht für indirekte Schäden, Datenverlust oder Dienstunterbrechungen. Unsere Gesamthaftung ist auf die in den letzten 12 Monaten gezahlten Beträge beschränkt."
+          "content": "Dumbbellflow wird \"wie besehen\" ohne Garantien bereitgestellt. Wir haften nicht für indirekte Schäden, Datenverlust oder Dienstunterbrechungen. Unsere Gesamthaftung ist auf die in den letzten 12 Monaten gezahlten Beträge beschränkt."
         },
         "termination": {
           "title": "9. Beendigung",

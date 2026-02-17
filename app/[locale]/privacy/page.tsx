@@ -8,7 +8,7 @@ export async function generateMetadata() {
   const t = await getTranslations('policies.privacy')
 
   return {
-    title: `${t('title')} - FitFlow`,
+    title: `${t('title')} - Dumbbellflow`,
     description: t('title'),
   }
 }

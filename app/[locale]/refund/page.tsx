@@ -7,7 +7,7 @@ export async function generateMetadata() {
   const t = await getTranslations('policies.refund')
 
   return {
-    title: `${t('title')} - FitFlow`,
+    title: `${t('title')} - Dumbbellflow`,
     description: t('title'),
   }
 }

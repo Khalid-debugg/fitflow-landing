@@ -139,7 +139,7 @@ export default async function BillingPage({
                   <p className="font-medium">Trial Period Active</p>
                   <p className="text-sm text-muted-foreground">
                     Your trial expires on {formatDate(user.trialEndAt)}.
-                    Upgrade now to continue using FitFlow after your trial
+                    Upgrade now to continue using Dumbbellflow after your trial
                     ends.
                   </p>
                 </div>
@@ -236,7 +236,7 @@ export default async function BillingPage({
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Your last payment failed. Please update your payment method
-                  to continue using FitFlow.
+                  to continue using Dumbbellflow.
                 </p>
                 <Button
                   variant="destructive"

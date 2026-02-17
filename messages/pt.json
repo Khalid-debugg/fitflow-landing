@@ -38,7 +38,7 @@
     },
     "hero": {
       "tagline": "Transforme Seu Negócio",
-      "description": "Com o FitFlow, sua academia não apenas cresce — ela prospera. Nosso sistema de gestão comprovado foca no engajamento dos membros, crescimento de receita e excelência operacional.",
+      "description": "Com o Dumbbellflow, sua academia não apenas cresce — ela prospera. Nosso sistema de gestão comprovado foca no engajamento dos membros, crescimento de receita e excelência operacional.",
       "cta": {
         "primary": "Iniciar Teste Gratuito",
         "login": "Entrar",
@@ -199,12 +199,12 @@
     },
     "testimonials": {
       "heading": "Confiado por Proprietários de Academias no Mundo Todo",
-      "subtitle": "Veja o que nossos clientes dizem sobre o FitFlow",
+      "subtitle": "Veja o que nossos clientes dizem sobre o Dumbbellflow",
       "items": {
         "testimonial1": {
           "name": "Sarah Johnson",
           "role": "Proprietária, FitLife Gym",
-          "content": "O FitFlow transformou a forma como gerenciamos nossa academia. O acompanhamento de membros e a cobrança automatizada nos economizaram horas toda semana. Altamente recomendado!"
+          "content": "O Dumbbellflow transformou a forma como gerenciamos nossa academia. O acompanhamento de membros e a cobrança automatizada nos economizaram horas toda semana. Altamente recomendado!"
         },
         "testimonial2": {
           "name": "Michael Rodriguez",
@@ -219,7 +219,7 @@
       }
     },
     "footer": {
-      "tagline": "Transforme a gestão da sua academia com FitFlow",
+      "tagline": "Transforme a gestão da sua academia com Dumbbellflow",
       "sections": {
         "product": {
           "title": "Produto",
@@ -251,13 +251,13 @@
           "security": "Segurança"
         }
       },
-      "copyright": "© 2026 FitFlow. Todos os direitos reservados."
+      "copyright": "© 2026 Dumbbellflow. Todos os direitos reservados."
     }
   },
   "auth": {
     "signin": {
       "title": "Bem-vindo de Volta",
-      "subtitle": "Entre na sua conta FitFlow",
+      "subtitle": "Entre na sua conta Dumbbellflow",
       "email": "Endereço de e-mail",
       "emailPlaceholder": "voce@exemplo.com",
       "password": "Senha",
@@ -277,7 +277,7 @@
       },
       "brandMessage": {
         "title": "Transforme a Gestão da Sua Academia",
-        "description": "Junte-se a milhares de donos de academias que confiam no FitFlow para otimizar operações e crescer seus negócios.",
+        "description": "Junte-se a milhares de donos de academias que confiam no Dumbbellflow para otimizar operações e crescer seus negócios.",
         "features": {
           "feature1": "Teste grátis de 30 dias",
           "feature2": "Sem necessidade de cartão",
@@ -387,7 +387,7 @@
       "success": {
         "title": "E-mail Verificado!",
         "message": "Seu e-mail foi verificado com sucesso.",
-        "welcome": "Bem-vindo ao FitFlow! Seu teste grátis de 30 dias começou.",
+        "welcome": "Bem-vindo ao Dumbbellflow! Seu teste grátis de 30 dias começou.",
         "signIn": "Entre para continuar"
       },
       "error": {
@@ -411,12 +411,12 @@
   "dashboard": {
     "title": "Painel de Controle",
     "welcome": "Bem-vindo de volta, {name}!",
-    "description": "Gerencie sua licença do FitFlow e monitore seus dispositivos ativos",
+    "description": "Gerencie sua licença do Dumbbellflow e monitore seus dispositivos ativos",
     "error": "Erro",
     "errorMessage": "Não foi possível carregar as informações da sua conta. Por favor, tente novamente mais tarde.",
     "license": {
       "title": "Sua Chave de Licença",
-      "description": "Use esta chave para ativar o FitFlow em seus dispositivos"
+      "description": "Use esta chave para ativar o Dumbbellflow em seus dispositivos"
     },
     "trial": {
       "title": "Teste Gratuito Ativo",
@@ -437,7 +437,7 @@
       "title": "Dispositivos Ativados",
       "count": "{current} de {limit} dispositivos ativados",
       "noDevices": "Nenhum dispositivo ativado ainda",
-      "getStarted": "Baixe e instale o FitFlow para começar",
+      "getStarted": "Baixe e instale o Dumbbellflow para começar",
       "deviceFallback": "Dispositivo {platform}",
       "trialActive": "Teste: {days}d restantes",
       "trialExpired": "Teste Expirado",
@@ -445,8 +445,8 @@
       "trialEndsLabel": "O teste termina"
     },
     "download": {
-      "title": "Baixar FitFlow",
-      "description": "Instale o FitFlow em seu computador para começar. Use sua chave de licença para ativar.",
+      "title": "Baixar Dumbbellflow",
+      "description": "Instale o Dumbbellflow em seu computador para começar. Use sua chave de licença para ativar.",
       "windows": "Baixar para Windows",
       "mac": "Baixar para Mac",
       "linux": "Baixar para Linux"
@@ -455,7 +455,7 @@
       "title": "Backups na Nuvem",
       "description": "Arquivos de backup sincronizados de seus dispositivos",
       "noBackups": "Ainda não há backups na nuvem",
-      "noBackupsDesc": "Ative o backup na nuvem em seu aplicativo de desktop FitFlow para sincronizar seus dados automaticamente",
+      "noBackupsDesc": "Ative o backup na nuvem em seu aplicativo de desktop Dumbbellflow para sincronizar seus dados automaticamente",
       "loading": "Carregando backups...",
       "error": "Falha ao carregar backups",
       "tryAgain": "Tentar Novamente",
@@ -535,11 +535,11 @@
       "sections": {
         "acceptance": {
           "title": "1. Aceitação dos Termos",
-          "content": "Ao usar o FitFlow, você concorda com estes termos. Você deve ter pelo menos 18 anos e fornecer informações precisas ao criar uma conta. Você é responsável por manter a segurança da conta."
+          "content": "Ao usar o Dumbbellflow, você concorda com estes termos. Você deve ter pelo menos 18 anos e fornecer informações precisas ao criar uma conta. Você é responsável por manter a segurança da conta."
         },
         "service": {
           "title": "2. Descrição do Serviço",
-          "content": "FitFlow é uma plataforma de gestão de academias que oferece gestão de membros, processamento de pagamentos e ferramentas operacionais. Podemos modificar ou descontinuar recursos a qualquer momento."
+          "content": "Dumbbellflow é uma plataforma de gestão de academias que oferece gestão de membros, processamento de pagamentos e ferramentas operacionais. Podemos modificar ou descontinuar recursos a qualquer momento."
         },
         "billing": {
           "title": "3. Assinatura e Cobrança",
@@ -555,15 +555,15 @@
         },
         "acceptableUse": {
           "title": "6. Uso Aceitável",
-          "content": "Não use o FitFlow para atividades ilegais, tente acesso não autorizado, interfira com a operação do serviço ou viole direitos de terceiros. Podemos suspender ou encerrar contas que violem estes termos."
+          "content": "Não use o Dumbbellflow para atividades ilegais, tente acesso não autorizado, interfira com a operação do serviço ou viole direitos de terceiros. Podemos suspender ou encerrar contas que violem estes termos."
         },
         "intellectualProperty": {
           "title": "7. Propriedade Intelectual",
-          "content": "FitFlow possui todo o software, designs e conteúdo (excluindo seus dados). Você não pode copiar, modificar ou distribuir nosso serviço sem permissão."
+          "content": "Dumbbellflow possui todo o software, designs e conteúdo (excluindo seus dados). Você não pode copiar, modificar ou distribuir nosso serviço sem permissão."
         },
         "liability": {
           "title": "8. Limitação de Responsabilidade",
-          "content": "FitFlow é fornecido \"como está\" sem garantias. Não somos responsáveis por danos indiretos, perda de dados ou interrupções de serviço. Nossa responsabilidade total é limitada aos valores que você pagou nos últimos 12 meses."
+          "content": "Dumbbellflow é fornecido \"como está\" sem garantias. Não somos responsáveis por danos indiretos, perda de dados ou interrupções de serviço. Nossa responsabilidade total é limitada aos valores que você pagou nos últimos 12 meses."
         },
         "termination": {
           "title": "9. Encerramento",
